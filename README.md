@@ -29,6 +29,7 @@
                 
                 
 **Phase 1: Week 3 to Week 8 (15%)**
+
         Phase 1 focuses on front-end Web development. You need to develop a prototype which
         contains the user interface design of the Web application. The following client-side Web
         technologies must be used to develop the front-end of your system:
@@ -40,6 +41,7 @@
 
 
 **Phase 2: Week 9 to Week 14 (25%)**
+
         Complete all the system development, including both client-side (front-end) and server-side (backend) development in this phase. Apart from the 
         client-side technologies, the Web application must
         also use a server-side scripting and a database. A technical report and a user manual of the system

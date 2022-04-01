@@ -23,6 +23,7 @@ html::-webkit-scrollbar-thumb {
 
 body{
     font-family: 'Roboto','sans-serif'; 
+    background-color: #010103;
 }
 
 h1{
@@ -40,6 +41,7 @@ h1{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    z-index: 3;
     
 }
 .navigation ul li {
@@ -125,7 +127,7 @@ h1{
 
     nav ul {
         width: 20%;
-        background: rgb(248, 0, 0);
+        background: rgb(94, 23, 235,0.9);
         position: absolute;
         top: 100px;
         right: 10px;
@@ -183,10 +185,40 @@ h1{
     padding:1rem 0;
 }
 
+/* login  */
+
+.empty-space {
+    height: 10vh;
+
+}
+
+
+.form {
+    background-color: #474444;
+    padding-bottom: 10vh;
 
 
 
+
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px;
+    border: none;
+    border-radius: 40px;
+
+}
+
+
+
+
+
+
+
+/* footer  */
 .footer {
+    margin-top: 30vh;
     background: black;
     text-align: center;
     

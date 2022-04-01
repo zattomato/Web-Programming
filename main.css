@@ -138,19 +138,19 @@ body{
         background-color: #010103;
     }
 
-    .carousel-slide{
-        width: 10px;
-    }
+    
 
     .carousel-inner {
         border-radius: 70px;
         margin: 50px 0;
+        
         
     
     }
 
     .carousel-item {
         transition: transform 1s ease-in-out;
+        
     }
     
     .carousel-fade .active.carousel-item-start,

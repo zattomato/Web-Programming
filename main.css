@@ -218,6 +218,8 @@ h1{
 
 /* footer  */
 .footer {
+    border-top: .1rem solid white;
+    padding-top: 1rem;
     margin-top: 30vh;
     background: black;
     text-align: center;

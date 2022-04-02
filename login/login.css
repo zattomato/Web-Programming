@@ -52,6 +52,16 @@ h1 {
 
 .btn-login:hover {
     color: black;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     transform: translateY(10px);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(0, 0, 0);
+    
 }

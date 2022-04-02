@@ -63,3 +63,15 @@
     • Session 1: 20 June 2022, 1pm – 3pm (Monday, Week 14)
     • Session 2: 22 June 2022, 12pm – 2pm (Wednesday, Week 14)
     Phase 2 Submission: 24 June 2022 (Friday, Week 14)
+
+
+
+Task Division
+
+1. Login                        - Naim
+2. Manage                       -
+3. Nearby Facilities            -
+4. Register Visitor             -
+5. Report C-19                  -
+6. Manage residents (admin)     -
+7. Manage C-19 (admin)          - Izzat

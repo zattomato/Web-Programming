@@ -53,9 +53,9 @@ Phase 2 Submission: 24 June 2022 (Friday, Week 14)
 Task Division
 
 Login - Naim
-Manage -
-Nearby Facilities -
-Register Visitor -
-Report C-19 -
-Manage residents (admin) -
+Manage - Ikmal
+Nearby Facilities - Aiman Harith
+Register Visitor - Abi
+Report C-19
+Manage residents (admin) 
 Manage C-19 (admin) - Izzat

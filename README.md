@@ -41,13 +41,13 @@ Phase 2: Week 9 to Week 14 (25%)
     present the completed system.
 Important Dates:
 
-Project Presentation 1:
+          Project Presentation 1:
           
           • Session 1: 25 April 2022, 1pm – 3pm (Monday, Week 7)
           • Session 2: 27 April 2022, 12pm – 2pm (Wednesday, Week 7)
           Phase 1 Submission: 29 April 2021 (Friday, Week 7)
 
-Project Presentation 2:
+          Project Presentation 2:
           
           • Session 1: 20 June 2022, 1pm – 3pm (Monday, Week 14)
           • Session 2: 22 June 2022, 12pm – 2pm (Wednesday, Week 14)

@@ -34,6 +34,8 @@ h1{
 .logo{
     width: 40px;
 }
+
+
 .navigation{
     padding: 20px;
     background-color: #010103;
@@ -54,16 +56,17 @@ h1{
     content: '';
     width: 0%;
     height: 2px;
-    background: rgb(255, 255, 255);
+    background-color: #d3ad7f;
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: all 0.5s;
     
     
     
 }
 
 .navi :hover:after {
+    
     width: 100%;
 
 }

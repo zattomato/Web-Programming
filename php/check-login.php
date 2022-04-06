@@ -22,7 +22,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
 	}else {
 
 		// Hashing the password
-		$password = md5($password);
+		$password = $password;
         
         $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
         $result = mysqli_query($conn, $sql);

@@ -18,7 +18,7 @@
     
     
     <!-- CSS link  -->
-    <link rel="stylesheet" href="mainPage/main.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <title>Casa Idaman Condominium</title>
 
@@ -56,7 +56,7 @@
                         <a class="nav-link text-white" href="#">Covid-19 Status</a>
                     </li> -->
                     <li class="nav-item navi">
-                        <a class="nav-link text-white nav-list " href="login.html">Login</a>
+                        <a class="nav-link text-white nav-list " href="index.php">Login</a>
                     </li>
     
                 </ul>

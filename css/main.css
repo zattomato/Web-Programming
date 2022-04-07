@@ -74,9 +74,7 @@ h3{
     width: 100%;
 
 }
-.active{
-    color: green !important;
-}
+
 
 
 /* title  */
@@ -172,7 +170,23 @@ h3{
         display: none;
     }
 
+    .dropmenu{
+        display: flex;
+        flex-direction: column;
+    }
     
+    .droplist{
+        background-color: rgb(94, 23, 235, 0.9);
+        border: none;
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+        
+    }
+
+    .text-dropmenu{
+        color: white;
+    }
 
 }
 

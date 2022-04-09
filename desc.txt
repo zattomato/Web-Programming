@@ -1,0 +1,12 @@
+ font-family  = Roboto(sans-serif) 
+              = Lobster(cursive) - logo
+              = @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+color         = rgb(0, 0, 0);       //white
+              = rgb(255, 255, 255); //black
+              = #d3ad7f             //gold
+              = #5E17EB             //purple
+              
+
+line-height  = 1.6

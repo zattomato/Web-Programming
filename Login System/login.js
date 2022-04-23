@@ -6,10 +6,10 @@ function auth(event) {
         var role = document.getElementById('role').value
 
         if (username === "sam" && password === "user"  ) {
-            window.location.replace("../home.html");
+            window.location.replace("../user/home.html");
         }
         else if(username === "john" && password === "admin" ){
-            window.location.replace("../management.html");
+            window.location.replace("../admin/management.html");
         }else
             alert("Invalid information");
             return;

@@ -60,6 +60,6 @@ Task Division
           Manage - Ikmal
           Nearby Facilities - Aiman Harith
           Register Visitor - Abi
-          Report C-19
-          Manage residents (admin) 
+          Report C-19 - Fahmi
+          Manage residents (admin) - Hussein
           Manage C-19 (admin) - Izzat

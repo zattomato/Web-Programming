@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS link --> 
-    <link rel="stylesheet" href="css/c19.css">
-    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/c19.css">
+    <link href="../css/main.css" rel="stylesheet" />
 
     <title>Casa Idaman C19 Report</title>
 
@@ -23,45 +23,54 @@
 
   <body class="bg-dark">
 
-    <header>
-      <!--Navigation Bar-->
-      
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="z-index:1000;">
-        <div class="container-fluid ">
-            <a href="#" class="navbar-brand">Casa Idaman</a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto">
-                    <a href="home.html" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">Managing resident's Account</a>
-                    <a href="c19management.html" class="nav-item nav-link">Covid-19 Reports</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
-                        <div class="dropdown-menu">
-                            <a href="profile.html" class="dropdown-item">User</a>
-                            <a href="#" class="dropdown-item">Admin</a>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="navbar-nav ms-auto">
-                    <a href="main.html" class="nav-item nav-link">Log out</a>
-                </div>
-            </div>
+    <!-- header section starts  -->
+    
+    <header class="container ">
+    
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
+        <div class="container">
+          <div style="display: flex; align-items:center;">
+            <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
+            <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
+          </div>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=" navbar-toggler-icon "><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item navi">
+                <a class="nav-link text-white nav-list " href="../admin/management.html">Home</a>
+              </li>
+              <li class="nav-item navi">
+                <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
+              </li>
+              <li class="nav-item navi">
+                <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid Reports</a>
+              </li>
+              <li class="nav-item navi">
+                <a class="nav-link text-white" href="../main.html">Logout</a>
+              </li>
+    
+    
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+    
+    
     </header>
+    
+    <!-- header section ends  -->
   
     <main>
-      <section class="container" id="gapAbove">
+      <section class="container " style="margin-top: 15vh;" id="gapAbove">
 
       </section>
       <section class="container">
         <div class="card d-flex" >
-          <img class="card-img-top" src="pic/covid.png" alt="Card image cap" style="height: auto;">
+          <img class="card-img-top" src="../pic/covid.png" alt="Card image cap" style="height: auto;">
           <div class="card-body">
             <p class="card-text">
               <h3>Covid-19 Cases</h3>

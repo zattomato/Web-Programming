@@ -256,9 +256,71 @@ h3{
 
 }
 
+/* covid 19 report*/
+.masthead{
+    background-color: #010103;
+    height: 950px;
+    color: antiquewhite;
+}
+.display-1.text-center{
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 750px;
+    height: 450px;
+}
+.display-3.text-center.text-uppercase{
+    color:aliceblue;
+}
+#daily{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+#monthly{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+#numCase{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#numberBig{
+    font-size: 125px;
+}
+#bgColor{
+    background-color: #DDDDDD;
+}
+.section-heading.text-uppercase{
+    font-size: 70px;
+    font-weight: bold;
+    color: #222831;
+}
+#c19link{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+#malaysiac19{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.day{
+    color: #0d6efd;
+}
+#todayDate{
+    margin-top: 10px;
+}
+#subHead{
+    font-style:oblique;
+}
 
-
-
+/*c19 management*/
+.col-xs-6.col-md-9 {
+    margin-top: 100px;
+}
+#c19cases{
+    margin-top: 200px;
+}
 
 
 

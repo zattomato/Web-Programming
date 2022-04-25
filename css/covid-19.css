@@ -3,38 +3,9 @@
 body{
     font-family: 'Roboto','sans-serif'; 
     background-color: #010103;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 }
 
-.card-footer{
-    text-align: center;
-}
-
-.card-footer a:link, a:visited {
-    background-color: #1d1c1c;
-    color: white;
-  }
-  
-.card-footer a:hover, a:active {
-    background-color: #3c3c3e;
-    color:rgb(176, 173, 173);
-  }
-
-.btn{
-    background-color: #1d1c1c;
-    color: white;
-}
-
-.btn:hover{
-    background-color: #3c3c3e;
-    color:rgb(176, 173, 173);
-}
-
-.overlay {
-    padding-top: 90px;
-    z-index: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
-}
 .navigation{
     padding: 20px;
     background-color: #010103;
@@ -134,4 +105,64 @@ html::-webkit-scrollbar {
 .table-bordered{
     border: #656464;
     border-width: 0.5px;
+}
+
+.footer {
+    border-top: .1rem solid white;
+    padding-top: 1rem;
+    margin-top: 20vh;
+    background: black;
+    text-align: center;
+    
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    text-decoration: none;
+    height: 3.3rem;
+    width: 3.3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    border: .1rem solid rgba(255, 255, 255, .3);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    background-color: #d3ad7f;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    text-decoration: none;
+    padding: .2rem .9rem;
+    color: #fff;
+    border: .1rem solid rgba(255, 255, 255, .3);
+    font-size: 1.2rem;
+}
+
+.footer .links a:hover {
+    background: #d3ad7f;
+}
+
+.footer .credit {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .credit span {
+    color: #d3ad7f;
 }

@@ -1,52 +1,18 @@
-/*Header*/
-/*Navigation*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-
-.navigation{
-    padding: 20px;
-    background-color: #010103;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-    z-index: 3;
-    
-    
-}
-.navigation ul li {
-    margin: 0 12px;
-    font-weight: bold;
-}
-
-.navi ::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: #d3ad7f;
-    display: block;
-    margin: auto;
-    transition: all 0.5s;
-}
-
-.navi :hover:after {
-    
-    width: 100%;
-
-}
-.logo{
-    width: 40px;
-}
 /*main*/
 .c19status{
-    color:aliceblue;
+    color:rgb(255, 255, 255);
     font-size:400px;
 }
 .subtextc19{
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-size: 35px;
 }
 .col-lg-6.col-md-8.mx-auto{
     width:1400px;
+}
+
+.status h1{
+    font-size: 30px  !important ; 
 }
 .heading3{
     color:#d3ad7f;

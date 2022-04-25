@@ -33,3 +33,11 @@ body {
     box-shadow: #222 1px 0 10px;
     text-decoration: underline;
 }
+
+.carousel-inner {
+    border-radius: 0;
+}
+
+.icon-grey {
+    color: #777;
+}

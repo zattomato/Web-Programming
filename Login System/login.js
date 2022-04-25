@@ -8,7 +8,7 @@ function auth(event) {
         if (username === "sam" && password === "user"  ) {
             window.location.replace("../user/home.html");
         }
-        else if(username === "john" && password === "admin" ){
+        else if(username === "jane" && password === "admin" ){
             window.location.replace("../admin/management.html");
         }else
             alert("Invalid information");

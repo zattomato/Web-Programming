@@ -1,12 +1,12 @@
-This is Our Web Programming Project
+ 💡 This is Our Web Programming Project 💡
 
-Project title : Online Community System
+Project title : Online Community System 🖍 
 
 Description :
 
 This system is intended to engage the residents in a neighbourhood (e.g. apartment condominium) and provide a way for residents to keep in touch with each other.
 
-The system should provide the following functions:
+📈The system should provide the following functions:
           Residents:
               • User login to access the system, manage the sessions
               • Manage user profile (view, update user details, delete a user account)
@@ -60,6 +60,6 @@ Task Division
           Manage - Ikmal
           Nearby Facilities - Aiman Harith
           Register Visitor - Abi
-          Report C-19
-          Manage residents (admin) 
+          Report C-19 - Fahmi
+          Manage residents (admin) - Hussein
           Manage C-19 (admin) - Izzat

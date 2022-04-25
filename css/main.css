@@ -21,37 +21,38 @@ html::-webkit-scrollbar-thumb {
     border-radius: 5rem;
 }
 
-body{
-    font-family: 'Roboto','sans-serif'; 
+body {
+    font-family: 'Roboto', 'sans-serif';
     background-color: #ffffff;
 }
 
-h1{
-        text-transform: uppercase;
-        font-size: 10px;
+h1 {
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
-h3{
+h3 {
     margin-bottom: 0.1rem;
 }
 
-.logo{
+.logo {
     width: 40px;
 }
 
 
-.navigation{
+.navigation {
     padding: 20px;
     background-color: #010103;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
-    
+
     z-index: 3;
-    
-    
+
+
 }
+
 .navigation ul li {
     margin: 0 12px;
     font-weight: bold;
@@ -65,13 +66,13 @@ h3{
     display: block;
     margin: auto;
     transition: all 0.5s;
-    
-    
-    
+
+
+
 }
 
 .navi :hover:after {
-    
+
     width: 100%;
 
 }
@@ -87,9 +88,9 @@ h3{
     width: 100%;
     height: 100%;
     z-index: 1;
-    
-    
-    
+
+
+
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
 
 }
@@ -122,6 +123,7 @@ h3{
     align-items: center;
 
 }
+
 .btn-login {
     background-color: #5E17EB;
     border: none;
@@ -132,13 +134,13 @@ h3{
 
 }
 
-.btn-login:hover{
+.btn-login:hover {
     color: black;
     background-color: aliceblue;
     transform: translateY(-10px);
 }
 
-.hero{
+.hero {
     margin-top: 100px;
 }
 
@@ -152,40 +154,40 @@ h3{
 
     nav ul {
         width: 20%;
-        background: rgb(94, 23, 235,0.9);
+        background: rgb(94, 23, 235, 0.9);
         position: absolute;
         top: 100px;
         right: 10px;
         z-index: 2;
-        
+
     }
 
     nav ul li {
         display: flex;
         margin-top: 10px;
         margin-bottom: 10px;
-        
+
     }
 
-    .space{
+    .space {
         display: none;
     }
 
-    .dropmenu{
+    .dropmenu {
         display: flex;
         flex-direction: column;
     }
-    
-    .droplist{
+
+    .droplist {
         background-color: rgb(94, 23, 235, 0.9);
         border: none;
         width: 100%;
         min-width: 0;
         padding: 0;
-        
+
     }
 
-    .text-dropmenu{
+    .text-dropmenu {
         color: white;
     }
 
@@ -194,37 +196,38 @@ h3{
 
 /* facility  */
 
-    .design{
-        padding-top: 100px;
-        background-color: #010103;
-    }
+.design {
+    padding-top: 100px;
+    background-color: #010103;
+}
 
-    
 
-    .carousel-inner {
-        border-radius: 70px;
-        margin: 50px 0;
-        
-        
-    
-    }
 
-    .carousel-item {
-        transition: transform 1s ease-in-out;
-        
-    }
-    
-    .carousel-fade .active.carousel-item-start,
-    .carousel-fade .active.carousel-item-end {
-        transition: opacity 0s 1s;
-    }
+.carousel-inner {
+    border-radius: 70px;
+    margin: 50px 0;
 
-    
+
+
+}
+
+.carousel-item {
+    transition: transform 1s ease-in-out;
+
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    transition: opacity 0s 1s;
+}
+
+
 /* visitor */
 
-.content{
-    padding:1rem 0;
+.content {
+    padding: 1rem 0;
 }
+
 
 
 
@@ -255,9 +258,71 @@ h3{
 
 }
 
+/* covid 19 report*/
+.masthead{
+    background-color: #010103;
+    height: 950px;
+    color: antiquewhite;
+}
+.display-1.text-center{
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 750px;
+    height: 450px;
+}
+.display-3.text-center.text-uppercase{
+    color:aliceblue;
+}
+#daily{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+#monthly{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+#numCase{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#numberBig{
+    font-size: 125px;
+}
+#bgColor{
+    background-color: #DDDDDD;
+}
+.section-heading.text-uppercase{
+    font-size: 70px;
+    font-weight: bold;
+    color: #222831;
+}
+#c19link{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+#malaysiac19{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.day{
+    color: #0d6efd;
+}
+#todayDate{
+    margin-top: 10px;
+}
+#subHead{
+    font-style:oblique;
+}
 
-
-
+/*c19 management*/
+.col-xs-6.col-md-9 {
+    margin-top: 100px;
+}
+#c19cases{
+    margin-top: 200px;
+}
 
 
 
@@ -268,7 +333,7 @@ h3{
     margin-top: 30vh;
     background: black;
     text-align: center;
-    
+
 }
 
 .footer .share {
@@ -320,4 +385,222 @@ h3{
 
 .footer .credit span {
     color: #d3ad7f;
+}
+
+/* Manage Residents  */
+.manage-residents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(0,0,0,0.6) url(/pic/mikhail-derecha-q-XTB-YTsho-unsplash.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+}
+
+/* Side menu in ADMIN */
+.sidebar {
+    z-index: 1;
+    top: 0;
+    background: #2f323a;
+    margin-top: 0px;
+    padding-top: 6%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .profile_info .profile_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile_info h4 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover {
+    background: #19B3D3;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+label #sidebar_btn {
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover {
+    color: #19B3D3;
+}
+
+#check:checked~.sidebar {
+    left: -185px;
+}
+
+#check:checked~.sidebar a span {
+    display: none;
+}
+
+#check:checked~.sidebar a {
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+}
+
+.mobile_nav {
+    display: none;
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 780px) {
+    .sidebar {
+        display: none;
+    }
+
+    #sidebar_btn {
+        display: none;
+    }
+
+    #check:checked~.content {
+        margin-left: 0;
+    }
+
+    .mobile_nav {
+        display: block;
+        width: calc(100% - 0%);
+        margin-top: 20px;
+    }
+
+    .nav_bar {
+        background: #222;
+        width: (100% - 0px);
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .nav_bar .mobile_profile_image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .nav_bar .nav_btn {
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.5s;
+        transition-property: color;
+    }
+
+    .nav_bar .nav_btn:hover {
+        color: #19B3D3;
+    }
+
+    .mobile_nav_items {
+        background: #2F323A;
+    }
+
+    .mobile_nav_items a {
+        color: #fff;
+        display: block;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 60px;
+        text-decoration: none;
+        box-sizing: border-box;
+        transition: 0.5s;
+        transition-property: background;
+    }
+
+    .mobile_nav_items a:hover {
+        background: #19B3D3;
+    }
+
+    .mobile_nav_items i {
+        padding-right: 10px;
+    }
+
+    .active {
+        display: block;
+    }
+    
+}
+
+/*  Dashaboard Containers */
+.dashboard-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding: 2%;
+    margin-left: 250px;
+    
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    transition: 0.5s;
+    color: white;
+
+}
+
+.dashboard-container div {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    padding: 2.5%;
+    background-color: rgb(47, 50, 58, 0.9);
+    width: 30%;
+    height: 45%;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.dashboard-container a {
+    color: #fff;
+}
+.dashboard-container h2 {
+    font-weight:800;
+    color: #19B3D3;
 }

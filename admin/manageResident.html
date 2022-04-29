@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- FontAwesome  -->
-    
-    <script src="https://kit.fontawesome.com/a5f941c7c3.js" crossorigin="anonymous"></script>
-    
-    
-    
-    <!-- CSS link  -->
-    <link rel="stylesheet" href="../css/main.css">
 
-    <title>Admin</title>
+    <script src="https://kit.fontawesome.com/a5f941c7c3.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
+
+
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="manageResidence.css">
+
+    <title>Manage Residents</title>
 </head>
+
 <body class="manage-residents">
     <!-- header section starts  -->
-    
+
     <header class="container ">
-    
+
         <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
             <div class="container">
                 <div style="display: flex; align-items:center;">
-                    <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
+                    <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px"
+                            alt=""></a>
                     <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
                 </div>
-    
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class=" navbar-toggler-icon "><i class="fas fa-bars"
@@ -46,30 +49,31 @@
                             <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
                         </li>
                         <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid Reports</a>
+                            <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid
+                                Reports</a>
                         </li>
                         <li class="nav-item navi">
                             <a class="nav-link text-white" href="../main.html">Logout</a>
                         </li>
-    
-    
+
+
                     </ul>
                 </div>
             </div>
         </nav>
-    
-    
+
+
     </header>
-    
+
     <!-- header section ends  -->
-    
+
     <!-- Main Content  -->
     <!-- Main Content  -->
 
     <div class="mobile_nav">
         <div class="nav_bar">
-          <img src="/pic/art-hauntington-jzY0KRJopEI-unsplash.jpg" class="mobile_profile_image" alt="">
-          <i class="fa fa-bars nav_btn"></i>
+            <img src="../pic/art-hauntington-jzY0KRJopEI-unsplash.jpg" class="mobile_profile_image" alt="">
+            <i class="fa fa-bars nav_btn"></i>
         </div>
         <div class="mobile_nav_items">
             <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
@@ -78,60 +82,115 @@
             <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
         </div>
     </div>
-      <!--mobile navigation bar end-->
+    <!--mobile navigation bar end-->
 
-      <!--sidebar start-->
-      <div class="sidebar">
+    <!--sidebar start-->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="sidebar">
+
         <div class="profile_info">
-          <img src="/pic/art-hauntington-jzY0KRJopEI-unsplash.jpg" class="profile_image" alt="">
-          <h4>Jane</h4>
+            <img src="../pic/art-hauntington-jzY0KRJopEI-unsplash.jpg" class="profile_image" alt="">
+            <h4>Jane</h4>
         </div>
         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
         <a href="#"><i class="fas fa-table"></i><span>Manage Accounts</span></a>
         <a href="#"><i class="fas fa-th"></i><span>Registration</span></a>
         <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-      </div>
-      <!--sidebar end-->
-      <div class = "dashboard-container">
-        <div class="container">
-            <a href=""><i class="fa-solid fa-circle-plus fa-3x"></i></a>
-            <h3>Add Account</h3>
-            <p>Add any new residents to the system.</p>
-        </div>
-        <div class="container">
-            <a href=""><i class="fa-solid fa-circle-minus fa-3x"></i></a>
-            <h3>Delete Account</h3>
-            <p>Delete previously registered accounts from the system.</p>
-        </div>
-        <div class="container">
-            <a href=""><i class="fa-solid fa-highlighter fa-3x"></i></a>
-            <h3>Update Information</h3>
-            <p>Add any new residents to the system.</p>
-        </div>
-        <div class="container">
-            <a href=""><i class="fa-solid fa-people-group fa-3x"></i></a>
-            <h3>View Residents</h3>
-            <p>View the list of registered residents.</p>
-        </div>
-        <div class="container">
-            <a href=""><i class="fa-solid fa-user-minus fa-3x"></i></a>
-            <h3>Complaints</h3>
-            <p>View any complaints coming from the residents.</p>
-        </div>
-        <div class="container">
-            <a href=""><i class="fa-solid fa-message fa-3x"></i></a>
-            <h3>Send Messages</h3>
-            <p>Communicate with the residents through broadcast messages or emails.</p>
-        </div>
-      </div>
-      
 
+    </div>
+    <!--Table of residents-->
+    <div class="main-content">
+        <!-- Buttons to register new user -->
+    <button class="register-btn" onclick="openForm()">Register New Resident</button>
+        <h2 class="table-header">Residents List:</h2>
+    <table class="residents-list">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody class="residents-data">
+            <!-- <tr>
+                <td class="index-num">1</td>
+                <td>Hussein</td>
+                <td>016342085</td>
+                <td>alshamari@gmail.com</td>
+                <td>A-11-7</td>
+                <td>
+                    <button class="edit-btn">
+                        <i class="fas fa-pen"></i>
+                    </button>
+                    <button class="delete-btn">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr> -->
+            
+            <!--
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        -->
+        </tbody>
+    </table>
+    <div class="form-container">
+        <h3>Enter The Residents Details:</h3>
+        <form class="reg-form" onsubmit="return false;">
+            <label for="name">Name:</label> <br>
+            <input type="text" id="name"> <br>
+            <label for="phone">phone:</label> <br>
+            <input type="text" id="phone"> <br>
+            <label for="email">Email:</label> <br>
+            <input type="text" id="email"> <br>
+            <label for="name">Unit:</label> <br>
+            <input type="text" id="unit"> <br>
+            <br>
+            <button id="submit-btn" type="submit" >Submit</button>
+            <button id="cancel-btn" type="submit" >Cancel</button>
+            
+        </form>
+    </div>
+</div>
+<footer class="footer">
+    <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="https://www.instagram.com/my.casa.idaman/" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-pinterest"></a>
+  </div>
+
+  <div class="links">
+      <a href="#">home</a>
+      <a href="#facility">facilities</a>
+      <a href="#visitor">visitor</a>
+      <a href="c19report.html">covid-19 status</a>
+      <a href="#">login</a>
+
+  </div>
+
+  <div class="credit">Created by <span>Web Programming Team 4</span> | all rights reserved</div>
+  </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous">  $(document).ready(function(){
-      $('.nav_btn').click(function(){
-        $('.mobile_nav_items').toggleClass('active');
-      });
-    });</script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">  $(document).ready(function () {
+                $('.nav_btn').click(function () {
+                    $('.mobile_nav_items').toggleClass('active');
+                });
+            });</script>
+            <script async src="manageResidence.js"></script>
+    
 </body>
+
 </html>

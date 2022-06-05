@@ -26,7 +26,7 @@
 
     <!-- header section starts  -->
     
-    <header class="container ">
+    <header class="container "> <!-- Navigation Bar-->
     
       <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
@@ -84,14 +84,14 @@
       </section>
 
       <!--update-->
-      <section>
+      <section> <!-- Update Daily C19 Cases-->
         <div class="container my-5" >
         
           <div class="col gap-3">
             <hr>
             <h4 class="mb-3 gap-5">Update Daily Covid-19 Status</h4>
             
-            <button class="btn btn-danger" onclick="myFunction()">Update Daily Cases here</button>
+            <button class="btn btn-danger" onclick="dailyCaseButton()">Update Daily Cases here</button>
             <form id="update"class="needs-validation" novalidate style="display: none;" >
               <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
 
@@ -147,7 +147,7 @@
                 <hr>
             </form>
             <script>
-              function myFunction() {
+              function dailyCaseButton() {
                 var x = document.getElementById("update");
                 if (x.style.display === "block") {
                   x.style.display = "none";
@@ -159,7 +159,55 @@
           </div>
         </div>
       </section>
+
+      <section> <!-- Test Section-->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h5>Resident Quarantine Status</h5>
+              <button class="btn btn-danger" onclick="myFunction()">View Resident Quarantine Status</button>
+              <!--add link to another page-->
+            </div>
+            <div class="col-sm-4">
+              <h5>Food Delivery Status</h5>
+                <button class="btn btn-danger" onclick="myFunction()">View Food Delivery Status</button>
+                <!--add link to another page-->
+            </div>
+            <div class="col-sm-4">
+              <h5>Update Daily Cases</h5>
+                <button class="btn btn-danger" onclick="myFunction()">Update Daiily Cases</button>
+                <!--add link to another page-->
+            </div>
+          </div>
+        </div>
+      </section>
       
+      
+      <section> <!-- Quarantine Status-->
+        <div class="container my-5" >
+        
+          <div class="col gap-3">
+            <hr>
+            <h4 class="mb-3 gap-5">Resident Quarantine Status</h4>
+            
+            <button class="btn btn-danger" onclick="myFunction()">View Resident Quarantine Status</button>
+            <!--add link to another page-->
+          </div>
+        </div>
+      </section>
+      
+      <section> <!--Food Delivery-->
+        <div class="container my-5" >
+        
+          <div class="col gap-3">
+            <hr>
+            <h4 class="mb-3 gap-5">Food Delivery Status</h4>
+            
+            <button class="btn btn-danger" onclick="">See Residence Food Delivery Status</button>
+            <!--addlink to page-->
+          </div>
+        </div>
+      </section>
       
     </main> 
   

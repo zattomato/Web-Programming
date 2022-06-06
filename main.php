@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <title>Casa Idaman Condominium</title>
-    
+
 </head>
 
 <body class="text-white">
@@ -34,7 +34,7 @@
             <div class="container">
                 <div style="display: flex; align-items:center;">
                     <a class="navbar-brand" href="#"><img class="logo" src="pic/casaidaman.png" width="180px" alt=""></a>
-                    <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
+                    <h3 class="title" style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,10 +43,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="Login System/register.html">Register</a>
+                            <a class="nav-link text-white nav-list " href="./Login System/register.php">Register</a>
                         </li>
+                        <!-- <li class="nav-item navi">
+                        <a class="nav-link text-white" href="#facility">Facilities</a>
+                    </li>
+                    <li class="nav-item navi">
+                        <a class="nav-link text-white nav-list "  href="#visitor">Visitor</a>
+                    </li>
+                    <li class="nav-item navi">
+                        <a class="nav-link text-white" href="#">Covid-19 Status</a>
+                    </li> -->
                         <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="Login System/login.html">Login</a>
+                            <a class="nav-link text-white nav-list " href="./Login System/login.php">Login</a>
                         </li>
 
                     </ul>
@@ -56,10 +65,6 @@
 
 
     </header>
-
-    <!-- header section ends  -->
-
-    <!-- hero section starts -->
     <div class="overlay2"></div>
     <section id="#home" class="bg-cover hero-section border-bottom pb-0 " style="background-image: url('https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1922&q=80'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
 
@@ -69,15 +74,15 @@
                     <h1 class="display-4 fw-bolder">Welcome To Casa <br> Idaman Condominium</h1>
                     <h4>Greatest Community</h4>
                     <p class="my-4">Being a part of a community might make us feel like we're a part of something bigger than ourselves. It can provide us
-                    with opportunity to interact with others, achieve our goals, and feel protected and secure. It is essential for everyone
-                    to have a sense of community.</p>
-                    <a href="Login System/login.html" class="btn btn-main btn-login  ">LOGIN</a>
+                        with opportunity to interact with others, achieve our goals, and feel protected and secure. It is essential for everyone
+                        to have a sense of community.</p>
+                    <a href="login.php" class="btn btn-main btn-login  ">LOGIN</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- hero section ends -->
+    <!-- header section ends  -->
 
 
 

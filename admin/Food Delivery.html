@@ -28,6 +28,42 @@
 
 <h2>Meeting Your Business Needs</h2>
 <p> Our expert designers are creative and eager to work with you. </p>
+
+<body class="bg-dark text-white">
+    <br><br><br>
+      <div class="col d-flex justify-content-center">
+      <div class="col-xs-9 col-md-7 ">
+      <div class="card" style="border-radius: 15px; background-color: rgba(251, 251, 251, 0.175);">
+          <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5"> <img src="../pic/casaidaman.png" width="130px" alt=""> Quarantine Report</h2>
+              <h6 class="fw-light">Report your resident quarantine status by filling the form below.</h6><br>
+              <form>
+                <div class="mb-3">
+                  <label for=status>What is your status? </label><br>
+                  <select class="form-select" id="status">
+                    <option value="positive"> Covid-19 Positive</option>
+                    <option value="close"> Close Contact</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="photo">Upload your evidence:</label>
+                  <input type="file" class="form-control" id ="photo" name="myEvidence">
+                </div>
+                <div class="mb-3">
+                  <label for="time">When does your quarantine starts?</label>
+                  <input type="datetime-local" class="form-control" id="time" name="myQuarantineStarts">
+                </div>
+                <div class="mb-3">
+                 <label for="time">When does your quarantine ends?</label>
+                  <input type="datetime-local" class="form-control" id="time" name="myQuarantineEnds">
+                </div><br>
+                <a href="covid-19 status.html" class="btn btn-primary" role="button" >Cancel</a>
+                <button class="btn btn-dark" type="submit" value="Submit" onclick="mySubmit()">Submit</button>
+              </form>   
+          </div>
+      </div>
+      </div>
+  </div>
 </main>
 
 <footer> 

@@ -80,8 +80,9 @@
             <h4 class="mb-3 gap-5 text-white">Daily Quarantine Report</h4>
             
             <!--add the table display-->
-            <!--display ones taht hasnt updated their status-->
-            
+            <!--display ones that hasnt updated their status-->
+            <!--provide information on the person of the unupdated status-->
+
           </div>
         </div>
       </section>

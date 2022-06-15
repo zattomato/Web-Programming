@@ -66,21 +66,15 @@
     <!-- header section ends  -->
   
     <main>
-      <section class="container " style="margin-top: 15vh;" id="gapAbove">
-
-      </section>
-      <section class="container">
-        <div class="card d-flex" >
-          <img class="card-img-top" src="../pic/covid.png" alt="Card image cap" style="height: 150px;">
-          <div class="card-body">
-            <p class="card-text">
-              <h3>Covid-19 Cases</h3>
-              <h5>See Covid-19 cases daily and monthy numbers here</h5>
-              
-              <a href="c19report.html" class="btn btn-dark"  role="button" style="padding:10px">Covid-19 Report</a> 
-            </p>
-          </div>
-        </div>
+      <section class='container'>
+        <!--Add Data of covid 19 Daily Cases-->
+        <!--Put basic line chart for the the track record of covid 19 cases
+          covid19 cases
+          num of people in quarantine
+          
+          Put column chart for the amount of people in quarantine
+        
+          use highcharts.js -->
       </section>
 
       <!--update-->
@@ -96,7 +90,7 @@
 
                 <form>
                   <br>
-                  <h3>Today: <?php 
+                  <h3>Today: <?php //Today's Day and Date
                     echo date('l'); 
                     echo date(" - d/m/Y");
                     echo date(" - H:i:s"); ?> 
@@ -114,7 +108,9 @@
                     <label for="DCasesB">Daily number of <span><b>BLOCK B</b></span> Covid-19 cases:</label>
                     <input type="number" class="form-control" id="DCasesB1" placeholder="Example: 1,2,3,4...">
                   </div>
-                  <h3>Month: April</h3>
+
+                  <h3>Month: <?php echo date('F');?> </h3> <!-- Month-->
+
                     <div class="form-group">
                     <label for="MCases">Monthly number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
                     <input type="number" class="form-control" id="MCases1" placeholder="Example: 1,2,3,4...">

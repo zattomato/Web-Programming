@@ -59,7 +59,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
                                     <a class="nav-link text-white" href="#">Covid-19 Reports</a>
                                 </li>
                                 <li class="nav-item navi">
-                                    <a class="nav-link text-white nav-list " href="../profile.php"><i class="fa-solid fa-circle-user"> </i>
+                                    <a class="nav-link text-white nav-list " href="..user/profile.php"><i class="fa-solid fa-circle-user"> </i>
                                         <?php
                                         echo $_SESSION['username']; ?>
                                     </a>
@@ -162,7 +162,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
                                     <a class="nav-link text-white" href="./covid-19 status.php">Covid-19 Status</a>
                                 </li>
                                 <li class="nav-item navi">
-                                    <a class="nav-link text-white nav-list " style="text-transform:capitalize;" href="../profile.php"><i class="fa-solid fa-circle-user"> </i>
+                                    <a class="nav-link text-white nav-list " style="text-transform:capitalize;" href="../user/profile.php"><i class="fa-solid fa-circle-user"> </i>
                                         <?php
                                         echo $_SESSION['username']; ?>
                                     </a>
@@ -301,7 +301,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
                     <a href="faci.php">facilities</a>
                     <a href="visitor.php">visitor</a>
                     <a href="covid-19 status.php">covid-19 status</a>
-                    <a href="profile.php">profile</a>
+                    <a href="../user/profile.php">profile</a>
 
                 </div>
 

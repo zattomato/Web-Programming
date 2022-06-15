@@ -89,19 +89,19 @@
         
           <div class="col gap-3">
             <hr>
-            <h4 class="mb-3 gap-5">Update Daily Covid-19 Status</h4>
+            <h4 class="mb-3 gap-5 text-white">Update Daily Covid-19 Status</h4>
             
             <form id="update">
               <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
 
                 <form>
                   <br>
-                  <h3>Today: <span id="current_date"></span></h3>
-                  
-                    <script>
-                    document.getElementById("current_date").innerHTML = Date();
-                    </script>
-                    <h3>Today: <?php echo date('H:i:s') echo date("d/m/Y") ?> </h3>
+                  <h3>Today: <?php 
+                    echo date('l'); 
+                    echo date(" - d/m/Y");
+                    echo date(" - H:i:s"); ?> 
+                  </h3>
+
                   <div class="form-group">
                     <label for="DCases">Daily number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
                     <input type="number" class="form-control" id="DCases1" placeholder="Example: 1,2,3,4...">

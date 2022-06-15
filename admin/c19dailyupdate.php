@@ -91,8 +91,7 @@
             <hr>
             <h4 class="mb-3 gap-5">Update Daily Covid-19 Status</h4>
             
-            <button class="btn btn-danger" onclick="dailyCaseButton()">Update Daily Cases here</button>
-            <form id="update"class="needs-validation" novalidate style="display: none;" >
+            <form id="update">
               <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
 
                 <form>
@@ -102,6 +101,7 @@
                     <script>
                     document.getElementById("current_date").innerHTML = Date();
                     </script>
+                    <h3>Today: <?php echo date('H:i:s') echo date("d/m/Y") ?> </h3>
                   <div class="form-group">
                     <label for="DCases">Daily number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
                     <input type="number" class="form-control" id="DCases1" placeholder="Example: 1,2,3,4...">
@@ -146,46 +146,9 @@
                 </form>
                 
             </form>
-            <script>
-              function dailyCaseButton() {
-                var x = document.getElementById("update");
-                if (x.style.display === "block") {
-                  x.style.display = "none";
-                } else {
-                  x.style.display = "block";
-                }
-              }
-              </script>
           </div>
         </div>
       </section>
-
-      <section> <!-- Test Section-->
-        <hr>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 text-white" align="center">
-              <h4 align="center">Resident Quarantine Status</h4>
-              <button class="btn btn-danger" onclick="myFunction()">View Resident Quarantine Status</button>
-              <!--add link to another page-->
-            </div>
-            <div class="col-sm-4 text-white" align="center">
-              <h5 align="center">Food Delivery Status</h5>
-                <button class="btn btn-danger" onclick="myFunction()">View Food Delivery Status</button>
-                <!--add link to another page-->
-            </div>
-            <div class="col-sm-4 text-white" align="center">
-              <h3 align="center">Update Daily Cases</h3>
-                <button class="btn btn-danger" onclick="myFunction()">Update Daily Cases</button>
-                <!--add link to another page-->
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-      
-      
     </main> 
   
 

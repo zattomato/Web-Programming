@@ -75,10 +75,11 @@
         <div class="card-body p-5">
             <h2 class="text-uppercase text-center mb-5"> <img src="../pic/casaidaman.png" width="130px" alt=""> Quarantine Report</h2>
             <h6 class="fw-light">Report your resident quarantine status by filling the form below.</h6><br>
-            <form>
+
+            <form action="c19statusconnection.php" method="post">
               <div class="mb-3">
                 <label for=status>What is your status? </label><br>
-                <select class="form-select" id="status">
+                <select class="form-select" id="status" name="c19status">
                   <option value="positive"> Covid-19 Positive</option>
                   <option value="close"> Close Contact</option>
                 </select>
@@ -98,6 +99,7 @@
               <a href="covid-19 status.html" class="btn btn-primary" role="button" >Cancel</a>
               <button class="btn btn-dark" type="submit" value="Submit" onclick="mySubmit()">Submit</button>
             </form>   
+
         </div>
     </div>
     </div>

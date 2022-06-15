@@ -85,7 +85,7 @@
             <hr>
             <h4 class="mb-3 gap-5 text-white">Update Daily Covid-19 Status</h4>
             
-            <form id="update">
+            <form id="update" action="" method="post">
               <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
 
                 <form>

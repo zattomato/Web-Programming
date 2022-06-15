@@ -5,7 +5,7 @@
     $myQuarantineEnds = $_POST['myQuarantineEnds'];
  
     //database connection
-    $conn = new mysqli('localhost','root','','c19quarantine')
+    $conn = new mysqli('localhost','root','','c19quarantine');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
 
@@ -14,7 +14,7 @@
         values(?,?,?,?)");
         $stmt->bind_param("sssss",$c19status,$myEvidence,$myQuarantineStarts,$myQuarantineEnds);
         $stmt->execute();
-        echo "Succesfully Registered Quarantine Status"
+        echo "Succesfully Registered Quarantine Status";
         $stmt->close();
         $conn->close();
     }

@@ -15,8 +15,8 @@
     <!-- icon link -->
     <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
     <!-- CSS link --> 
-    <link rel="stylesheet" href="css/c19.css">
-    <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/c19.css">
+    <link href="../css/main.css" rel="stylesheet">
 
     <title>Casa Idaman C19 Report</title>
 
@@ -24,7 +24,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
 
-  <body class="bg-dark">
+  <body class="bg-light">
 
     <!-- header section starts  -->
     
@@ -63,12 +63,12 @@
       </nav>
     
     
-</div>
+    </div>
     
     <!-- header section ends  -->
   
     <main>
-      <section class='container'>
+      <section>
         <!--Add Data of covid 19 Daily Cases-->
         <!--Put basic line chart for the the track record of covid 19 cases
           covid19 cases
@@ -78,14 +78,59 @@
         
           use highcharts.js -->
       </section>
+      <section>
+        <div class="container-lg">
+          <div class="row">
+            <div class="col">
+              <h3>Covid-19 Cases</h3>
+              <!--Charts from database-->
+              <h4>Total Number of Covid-19 Cases: </h4>
+              <h4>Month: </h4>
+              <h4>Today: </h4>
+
+            </div>
+            <div class="col">
+              <h3>Number Under Quarantine</h3>
+              <!--Chart from database-->
+              <h4>Total Number of People Under Quarantine: </h4>
+              <h4>Month: </h4>
+              <h4>Today: </h4>
+
+            </div>
+          </div>
+          <hr>
+      </section>
 
       <!--update-->
+      <section>
+        <div class="container-lg bg-dark">
+          <button onclick="myFunction()">Click Me</button>
+
+          <div id="myDIV">
+            This is my DIV element.
+          </div>
+          <script>
+            function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+            }
+          </script>
+
+        </div>
+      </section>
+      
+      
+
       <section> <!-- Update Daily C19 Cases-->
-        <div class="container my-5" >
+        <div class="container-lg" >
         
           <div class="col gap-3">
             <hr>
-            <h4 class="mb-3 gap-5 text-white">Update Daily Covid-19 Status</h4>
+            <h2 class="mb-3 gap-5 text-black">Update Daily Covid-19 Status</h2>
             
             <form id="update" action="" method="post">
               <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">

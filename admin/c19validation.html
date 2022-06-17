@@ -17,7 +17,7 @@
     <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
     <!-- CSS link --> 
     <link rel="stylesheet" href="../css/c19.css">
-    <link href="../css/main.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet">
 
     <title>Casa Idaman C19 Report</title>
 
@@ -26,12 +26,9 @@
   </head>
 
   <body class="bg-dark">
-
     <!-- header section starts  -->
-    
-    <div class="container "> <!-- Navigation Bar-->
-    
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
+    <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
           <div style="display: flex; align-items:center;">
             <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
@@ -53,31 +50,35 @@
               <li class="nav-item navi">
                 <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid Reports</a>
               </li>
+              <li class="nav-item navi dropdown">
+                <a class="nav-link text-white nav-list dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Covid Quarantine Management
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Covid-19 Reports</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../admin/c19validation.html">Validation</a>
+                  <a class="dropdown-item" href="../admin/c19qstatus.html">Status Report</a>
+                  <a class="dropdown-item" href="../admin/c19updatedata.html">Update Data</a>
+                </div>
+              </li>
               <li class="nav-item navi">
                 <a class="nav-link text-white" href="../main.html">Logout</a>
               </li>
-    
-    
             </ul>
           </div>
         </div>
       </nav>
     
     
-</div>
-    
     <!-- header section ends  -->
-  
+
     <main>
-      <section class='container'>
-        <!--Add Data of covid 19 Daily Cases-->
-        <!--Put basic line chart for the the track record of covid 19 cases
-          covid19 cases
-          num of people in quarantine
-          
-          Put column chart for the amount of people in quarantine
+
+      <section class='container-lg'>
         
-          use highcharts.js -->
+        <h3 class="mb-3 gap-5 text-white">Covid-19 & Quarantine Validation Page</h3>
+        <h4 class="text-white">description askdjkhaldkj lkd jlaks djladkj laksd jlakdj alkdjalkd alkdj alskdj alsdjkaldkj aldkjasdl kajd lkas jdlakdsj lakdj alkdjalksd alsdkj aldkj asldkjasld</h4>
       </section>
 
       <!--update-->
@@ -85,67 +86,40 @@
         <div class="container my-5" >
         
           <div class="col gap-3">
-            <hr>
-            <h4 class="mb-3 gap-5 text-white">Update Daily Covid-19 Status</h4>
-            
-            <form id="update" action="" method="post">
-              <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
-
-                <form>
-                  <br>
-                  <h3>Today: <?php //Today's Day and Date
-                    echo date('l'); 
-                    echo date(" - d/m/Y");
-                    echo date(" - H:i:s"); ?> 
-                    <?php ?> 
-                  </h3>
-
-                  <div class="form-group">
-                    <label for="DCases">Daily number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
-                    <input type="number" class="form-control" id="DCases1" placeholder="Example: 1,2,3,4...">
-                  </div>
-                  <div class="form-group">
-                    <label for="DCasesA">Daily number of <span><b>BLOCK A</b></span> Covid-19 cases:</label>
-                    <input type="number" class="form-control" id="DCasesA1" placeholder="Example: 1,2,3,4...">
-                  </div>
-                  <div class="form-group">
-                    <label for="DCasesB">Daily number of <span><b>BLOCK B</b></span> Covid-19 cases:</label>
-                    <input type="number" class="form-control" id="DCasesB1" placeholder="Example: 1,2,3,4...">
-                  </div>
-
-                  <h3>Month: <?php echo date('F');?> </h3> <!-- Month-->
-
-                    <div class="form-group">
-                    <label for="MCases">Monthly number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
-                    <input type="number" class="form-control" id="MCases1" placeholder="Example: 1,2,3,4...">
-                  </div>
-                  <div class="form-group">
-                    <label for="MCasesA">Monthly number of <span><b>BLOCK A</b></span> Covid-19 cases:</label>
-                    <input type="number" class="form-control" id="MCasesA1" placeholder="Example: 1,2,3,4...">
-                  </div>
-                  <div class="form-group">
-                    <label for="MCasesB">Monthly number of <span><b>BLOCK B</b></span> Covid-19 cases:</label>
-                    <input type="number" class="form-control" id="MCasesB1" placeholder="Example: 1,2,3,4...">
-                  </div>
-                  <button type="submit" class="btn btn-primary" onclick="getInputValue();">Submit</button>
-                  <script>
-
-                    function getInputValue(){
-                        // Selecting the input element and get its value 
-                        var DCasesO = document.getElementById("DCases1").value;
-                        var DCasesA = document.getElementById("DCasesA1").value;
-                        var DCasesB = document.getElementById("DCasesB1").value;
-                        var MCasesO = document.getElementById("MCases1").value;
-                        var MCasesA = document.getElementById("MCasesA1").value;
-                        var MCasesB = document.getElementById("MCasesB1").value;
-                        
-                        // Displaying the value
-                        alert("You have submitted:\n"+"Daily Cases:"+DCasesO+"\nDaily Cases Block A:"+DCasesA+"\nDaily Cases Block B:"+DCasesB+"\nMonthly Cases:"+MCasesO+"\nMonthly Cases Block A:"+MCasesA+"\nMonthly Cases Block B:"+MCasesB);
-                    }
-                </script>
-                </form>
-                
-            </form>
+            <hr>            
+            <div class="card" style="height:540px; background-color: rgba(251, 251, 251, 0.175); border-radius: 50px;">
+              <div class="card-body p-5">
+                  <h3>Covid-19 & Quarantine Index</h3><br>
+                  <h5>Report your quarantine status here.</h5><br>
+                  
+                  <table class="table table-secondary table-striped table-bordered ">
+                      <thead>
+                      <tr>
+                          <th scope="col"></th>
+                          <th scope="col">Report ID</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Type of Case</th>
+                          <th scope="col">Quarantine Start Date</th>
+                          <th scope="col">Quarantine End Date</th>
+                          <th scope="col">Validation Status</th>
+                          <th scope="col">Profile</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                          <th scope="row">1</th>
+                          <td>1312</td>
+                          <td>Abdul Faris Jabba</td>
+                          <td>Covid-19 Positive</td>
+                          <td>25/4/2022</td>
+                          <td>2/5/2022</td>
+                          <td>Validated</td>
+                          <td><a href="../user/covid-19 report.html" class="btn btn-primary"  role="button" >View</a></td>
+                      </tbody>
+                  </table> 
+              </div>
+          </div>
+          <br><hr>
           </div>
         </div>
       </section>

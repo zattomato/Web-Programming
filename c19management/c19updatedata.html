@@ -95,11 +95,8 @@
 
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          ['Close Contact',     11],
+          ['Covid-19',      2]
         ]);
 
         var options = {
@@ -213,7 +210,7 @@
 
                 <form>
                   
-                  <h3>Today: <?php //Today's Day and Date
+                  <h3 id="header2">Today: <?php //Today's Day and Date
                     echo date('l'); 
                     echo date(" - d/m/Y");
                     echo date(" - H:i:s"); ?> 
@@ -222,29 +219,35 @@
 
                   <div class="form-group">
                     <label for="DCases">Daily number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
+                    
                     <input type="number" class="form-control" id="DCases1" placeholder="Example: 1,2,3,4...">
                   </div>
                   <div class="form-group">
                     <label for="DCasesA">Daily number of <span><b>BLOCK A</b></span> Covid-19 cases:</label>
+                    
                     <input type="number" class="form-control" id="DCasesA1" placeholder="Example: 1,2,3,4...">
                   </div>
                   <div class="form-group">
                     <label for="DCasesB">Daily number of <span><b>BLOCK B</b></span> Covid-19 cases:</label>
+                    
                     <input type="number" class="form-control" id="DCasesB1" placeholder="Example: 1,2,3,4...">
                   </div>
 
-                  <h3>Month: <?php echo date('F');?> </h3> <!-- Month-->
+                  <h3 id="header2">Month: <?php echo date('F');?> </h3> <!-- Month-->
 
                     <div class="form-group">
                     <label for="MCases">Monthly number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
+                    
                     <input type="number" class="form-control" id="MCases1" placeholder="Example: 1,2,3,4...">
                   </div>
                   <div class="form-group">
                     <label for="MCasesA">Monthly number of <span><b>BLOCK A</b></span> Covid-19 cases:</label>
+                    
                     <input type="number" class="form-control" id="MCasesA1" placeholder="Example: 1,2,3,4...">
                   </div>
                   <div class="form-group">
                     <label for="MCasesB">Monthly number of <span><b>BLOCK B</b></span> Covid-19 cases:</label>
+                    
                     <input type="number" class="form-control" id="MCasesB1" placeholder="Example: 1,2,3,4...">
                   </div>
                   <button type="submit" class="btn btn-primary" onclick="getInputValue();">Submit</button>

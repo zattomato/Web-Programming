@@ -75,9 +75,8 @@
     <main>
 
       <section class='container-lg mt-5'>
-        
         <h1 class="mb-3 gap-5 text-white">Covid-19 & Quarantine Validation Page</h1>
-        <p class="text-white">description askdjkhaldkj lkd jlaks djladkj laksd jlakdj alkdjalkd alkdj alskdj alsdjkaldkj aldkjasdl kajd lkas jdlakdsj lakdj alkdjalksd alsdkj aldkj asldkjasld</p>
+        <p id="total" class="text-white">The table below shows the covid-19 and quarantine reports that requires validation.</p>
       </section>
 
       <!--update-->
@@ -86,41 +85,58 @@
         
           <div class="col gap-3">
                        
-            <div class="card" style="height:540px; background-color: rgba(251, 251, 251, 0.175); border-radius: 50px;">
+            <div class="card" style="height:540px; background-color: rgba(251, 251, 251, 0.175); border-radius: 15px;">
               <div class="card-body p-5">
-                  <h3>Covid-19 & Quarantine Index</h3><br>
-                  <h5>Report your quarantine status here.</h5><br>
-                  
-                  <table class="table table-secondary table-striped table-bordered ">
-                      <thead>
+                <div class="row">
+                  <h2 id="header2">Casa Idaman Covid-19 & Quarantine Index</h2>
+                  <p id="total">Report your quarantine status here.</p><br>
+                  <hr>
+                </div>
+                <div class="row">
+                  <table class="table table-bordered border-secondary table-striped table-hover bg-light text-center table-responsive">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Report ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Type of Case</th>
+                        <th scope="col">Quarantine Start Date</th>
+                        <th scope="col">Quarantine End Date</th>
+                        <th scope="col">Validation Status</th>
+                        <th scope="col">Profile</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>1312</td>
+                        <td>Abdul Faris Jabba</td>
+                        <td>Covid-19 Positive</td>
+                        <td>25/4/2022</td>
+                        <td>2/5/2022</td>
+                        <td>Validated</td>
+                        <td>
+                          <button class="btn btn-primary" onclick="">View Profile</button>                          
+                        </td>
+                    </tbody>
+                    <tbody>
                       <tr>
-                          <th scope="col"></th>
-                          <th scope="col">Report ID</th>
-                          <th scope="col">Name</th>
-                          <th scope="col">Type of Case</th>
-                          <th scope="col">Quarantine Start Date</th>
-                          <th scope="col">Quarantine End Date</th>
-                          <th scope="col">Validation Status</th>
-                          <th scope="col">Profile</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                          <th scope="row">1</th>
-                          <td>1312</td>
-                          <td>Abdul Faris Jabba</td>
-                          <td>Covid-19 Positive</td>
-                          <td>25/4/2022</td>
-                          <td>2/5/2022</td>
-                          <td>Validated</td>
-                          <td>
-                            <button class="btn btn-primary" onclick="">View Profile</button>                          
-                          </td>
-                      </tbody>
-                  </table> 
+                      <th scope="row">2</th>
+                      <td>1312</td>
+                      <td>Abdul Faris Jabba</td>
+                      <td>Covid-19 Positive</td>
+                      <td>25/4/2022</td>
+                      <td>2/5/2022</td>
+                      <td>Validated</td>
+                      <td>
+                        <button class="btn btn-primary" onclick="">View Profile</button>                          
+                      </td>
+                  </tbody>
+                </table> 
+                </div>
               </div>
           </div>
-          <br><hr>
+          <br>
           </div>
         </div>
       </section>

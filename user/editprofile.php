@@ -111,18 +111,7 @@ if (!(isset($_SESSION['username']) && isset($_SESSION['id']))) {
 
 
                     </li>
-                    <li class="nav-item   dropmenu  dropdown">
-                        <a class="nav-link dropdown-toggle text-white  " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-circle-user"></i>
-                            User
-                        </a>
-                        <ul class="dropdown-menu droplist" aria-labelledby="navbarDropdown">
-                            <li ><a class="dropdown-item text-dropmenu " href="./profile.php">User</a></li>
-                            <li><a class="dropdown-item text-dropmenu" href="./management.html">Admin</a></li>
-                            
-                        </ul>
-                    </li>
+                    
                     <li class="nav-item navi">
                     
                       <a class="nav-link text-white" href="../user/profile.php"><i class="fa-solid fa-circle-user"></i>  
@@ -161,7 +150,13 @@ if (!(isset($_SESSION['username']) && isset($_SESSION['id']))) {
 
         <div class="text-center">
           <img src="../uploads/<?php echo $row['photo']; ?>" class="avatar img-circle img-thumbnail" alt="avatar">
-          
+          <hr>
+          <a class="btn" href="changeUser.php">
+          <button type="edit" href="../user/changeUser.php" name="edit" class="btn" style="color: white; background-color: #008CBA;">Change Username</button>
+        </a>
+        <a class="btn" href="changePass.php">
+          <button type="edit" href="../user/changePass.php" name="edit" class="btn" style="color: white; background-color: #008CBA;">Change Password</button>
+        </a>
         </div>
         <?php }} ?>
       </div>
@@ -211,32 +206,16 @@ if (!(isset($_SESSION['username']) && isset($_SESSION['id']))) {
               <input class="form-control" type="text" value="<?php echo $row['homenumber']; ?>" name="homenumber" id="homenumber">
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Twitter:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Instagram:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Facebook:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
+          
           <br>
           <div class="form-group">
             <label for="photo">Photo: </label>
             <input type="file" accept="image/*" id="photo" name="photo">
             </div>
+            <br>
           <div class="row">
             <div class="col-sm-12">
-              <button type="submit" href="profile.php" name="submit" class="btn">Save Changes</button>
+              <button type="submit" href="profile.php" name="submit" class="btn" style="color: white; background-color: #008CBA;">Save Changes</button>
             </div>
           </div>
           <?php }} ?>

@@ -1,4 +1,5 @@
 /*main*/
+
 .c19status{
     color:rgb(255, 255, 255);
     font-size:400px;
@@ -16,6 +17,9 @@
 }
 .heading3{
     color:#d3ad7f;
+}
+.heading5{
+    color: #fff;
 }
 .pic.col.container{
     display: block;
@@ -66,6 +70,22 @@
 }
 .container.my-5{
     color: aliceblue;
+}
+#DataVisualiser{
+    padding-top: 65px;
+}
+#updatedata{
+    font-size: 70px;
+    text-align: center;
+    padding: 40px;
+}
+#updatedataform{
+    background-color: rgba(214, 214, 214, 0.877);
+    border-radius: 25px;
+    
+}
+#update{
+    padding: 20px;
 }
 
 /*Footer*/

@@ -15,18 +15,20 @@
     <!-- icon link -->
     <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
     <!-- CSS link --> 
-    <link rel="stylesheet" href="../css/c19.css">
-    <link href="../css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/c19.css">
+    <link href="css/main.css" rel="stylesheet" />
 
     <title>Casa Idaman C19 Report</title>
 
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
 
   <body class="bg-dark">
 
     <!-- header section starts  -->
     
-    <header class="container "> <!-- Navigation Bar-->
+    <div class="container "> <!-- Navigation Bar-->
     
       <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
@@ -51,40 +53,30 @@
                 <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid Reports</a>
               </li>
               <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19validation.html">Covid Validation</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19updatedata.html">Covid Data Update</a>
-              </li>
-              <li class="nav-item navi">
                 <a class="nav-link text-white" href="../main.html">Logout</a>
               </li>
+    
+    
             </ul>
           </div>
         </div>
       </nav>
     
     
-    </header>
+</div>
     
     <!-- header section ends  -->
   
     <main>
-      <section class="container " style="margin-top: 15vh;" id="gapAbove">
-
-      </section>
-      <section class="container">
-        <div class="card d-flex" >
-          <img class="card-img-top" src="../pic/covid.png" alt="Card image cap" style="height: 150px;">
-          <div class="card-body">
-            <p class="card-text">
-              <h3>Covid-19 Cases</h3>
-              <h5>See Covid-19 cases daily and monthy numbers here</h5>
-              
-              <a href="c19report.html" class="btn btn-dark"  role="button" style="padding:10px">Covid-19 Report</a> 
-            </p>
-          </div>
-        </div>
+      <section class='container'>
+        <!--Add Data of covid 19 Daily Cases-->
+        <!--Put basic line chart for the the track record of covid 19 cases
+          covid19 cases
+          num of people in quarantine
+          
+          Put column chart for the amount of people in quarantine
+        
+          use highcharts.js -->
       </section>
 
       <!--update-->
@@ -93,19 +85,20 @@
         
           <div class="col gap-3">
             <hr>
-            <h4 class="mb-3 gap-5">Update Daily Covid-19 Status</h4>
+            <h4 class="mb-3 gap-5 text-white">Update Daily Covid-19 Status</h4>
             
-            <button class="btn btn-danger" onclick="dailyCaseButton()">Update Daily Cases here</button>
-            <form id="update"class="needs-validation" novalidate style="display: none;" >
+            <form id="update" action="" method="post">
               <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
 
                 <form>
                   <br>
-                  <h3>Today: <span id="current_date"></span></h3>
-                  
-                    <script>
-                    document.getElementById("current_date").innerHTML = Date();
-                    </script>
+                  <h3>Today: <?php //Today's Day and Date
+                    echo date('l'); 
+                    echo date(" - d/m/Y");
+                    echo date(" - H:i:s"); ?> 
+                    <?php ?> 
+                  </h3>
+
                   <div class="form-group">
                     <label for="DCases">Daily number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
                     <input type="number" class="form-control" id="DCases1" placeholder="Example: 1,2,3,4...">
@@ -118,7 +111,9 @@
                     <label for="DCasesB">Daily number of <span><b>BLOCK B</b></span> Covid-19 cases:</label>
                     <input type="number" class="form-control" id="DCasesB1" placeholder="Example: 1,2,3,4...">
                   </div>
-                  <h3>Month: April</h3>
+
+                  <h3>Month: <?php echo date('F');?> </h3> <!-- Month-->
+
                     <div class="form-group">
                     <label for="MCases">Monthly number of <span><b>OVERALL</b></span> Covid-19 cases:</label>
                     <input type="number" class="form-control" id="MCases1" placeholder="Example: 1,2,3,4...">
@@ -150,46 +145,9 @@
                 </form>
                 
             </form>
-            <script>
-              function dailyCaseButton() {
-                var x = document.getElementById("update");
-                if (x.style.display === "block") {
-                  x.style.display = "none";
-                } else {
-                  x.style.display = "block";
-                }
-              }
-              </script>
           </div>
         </div>
       </section>
-
-      <section> <!-- Test Section-->
-        <hr>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 text-white" align="center">
-              <h4 align="center">Resident Quarantine Status</h4>
-              <button class="btn btn-danger" onclick="myFunction()">View Resident Quarantine Status</button>
-              <!--add link to another page-->
-            </div>
-            <div class="col-sm-4 text-white" align="center">
-              <h5 align="center">Food Delivery Status</h5>
-                <button class="btn btn-danger" onclick="myFunction()">View Food Delivery Status</button>
-                <!--add link to another page-->
-            </div>
-            <div class="col-sm-4 text-white" align="center">
-              <h3 align="center">Update Daily Cases</h3>
-                <button class="btn btn-danger" onclick="myFunction()">Update Daily Cases</button>
-                <!--add link to another page-->
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-      
-      
     </main> 
   
 

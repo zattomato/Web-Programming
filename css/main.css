@@ -263,6 +263,8 @@ h3 {
     background-color: #010103;
     height: 950px;
     color: antiquewhite;
+}html body{
+    padding-top: 65px;
 }
 .display-1.text-center{
     font-weight: bold;

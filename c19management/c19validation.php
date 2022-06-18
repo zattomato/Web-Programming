@@ -13,7 +13,7 @@
 
   $sql = 'SELECT * 
           FROM quarantine_report
-          ORDER BY validate';
+          ORDER BY validate DESC';
 
   $result = mysqli_query($conn, $sql);
   #$quarantine_report = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -116,46 +116,34 @@
                   <hr>
                 </div>
                 <div class="row">
-                  
-
-                  
-
-
-                  
-
-
                   <table class="table table-bordered border-secondary table-striped table-hover bg-light text-center table-responsive">
                     <thead>
                     <tr>
                         <th scope="col">Report ID</th>
-                        <th scope="col">Name</th>
                         <th scope="col">Type of Case</th>
                         <th scope="col">Quarantine Start Date</th>
                         <th scope="col">Quarantine End Date</th>
                         <th scope="col">Validation Status</th>
-                        <th scope="col">Profile</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Validation</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <?php 
+                    <tbody><?php 
                     if($result->num_rows>0){
                       while($row = $result-> fetch_assoc()){
-                        echo "<tr><td>" . $row['report_id'] . "</td><td>" . $row['report_status'] . "</td><td>" . $row['q_start_date'] . "</td><td>" . $row['q_end_date'] . "</td><td>" . $row['validate'] . "</td><td>" . $row['report_id'] . "</td>"
-                        ;
+                        echo "<tr><td>" . $row['report_id'] . "</td><td>" . $row['report_status'] . "</td><td>" . $row['q_start_date'] . 
+                        "</td><td>" . $row['q_end_date'] . "</td><td>" . $row['validate'] . "</td><td>" . $row['report_id'] . "</td><td>" . 
+                        "<form>
+                         <input type=\"submit\" value=\"Validate\">
+                        </form></td></tr>";
+                        
                       }
-                    } else {
-                      echo "All Covid-19 and Quarantine have been validated";
-                    }
+                    } 
                     mysqli_close($conn);
-                  ?>
-                    <td>
-                      <button class="btn btn-primary" onclick="">View Profile</button>                          
-                    </td>
-                  </tr>
+                    ?>
+                    </tr>
                     </tbody>
-                    
-                </table> 
-                
+                  </table> 
                 </div>
               </div>
           </div>

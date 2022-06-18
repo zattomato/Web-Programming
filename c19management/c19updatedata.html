@@ -205,69 +205,44 @@
         
           <div id="updatedataform" class="col gap-3 bg-light">
             
-            <h2 id="updatedata" class="mb-2 gap-5 text-dark">UPDATE COVID-19 STATUS</h2>
+            <h2 id="updatedata" class="mb-2 gap-5 text-dark">UPDATE COVID-19 DATA</h2>
+            <hr>
+            
+            asdasd
+
             <hr>
             <form id="update" action="" method="post">
-              <div class="row g-3 gap-2" style="padding: 20px; color: black;">
+              <div class="row g-3 gap-1" style="padding: 20px; color: black;">
 
                 <form>
                   
-                  <h3 id="header1">Today: <?php //Today's Day and Date
-                    echo date('l'); 
-                    echo date(" - d/m/Y");
-                    echo date(" - H:i:s"); ?> 
-                    <?php ?> 
-                  </h3>
-                  <p id="subtotal">Update the monthly number of cases here.</p>
-
+                  <h3 id="header1">Add Covid-19 Quarantine Report</h3>
+                  <p id="subtotal">Manually insert Covid-19 and quarantine data here.</p>
                   <div class="form-group">
-                    <label for="DCases"><span><b>OVERALL</b></span> Covid-19 cases:</label>
-                    
-                    <input type="number" class="form-control" id="DCases1" placeholder="Example: 1,2,3,4...">
+                    <label for=status>What is the person's status? </label><br>
+                    <select class="form-select" id="status" name="c19status">
+                      <option value="positive"> Covid-19 Positive</option>
+                      <option value="close"> Close Contact</option>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <label for="DCasesA"><span><b>BLOCK A</b></span> Covid-19 cases:</label>
-                    
-                    <input type="number" class="form-control" id="DCasesA1" placeholder="Example: 1,2,3,4...">
+                    <label for=status>What is the person's house unit number? </label><br>
+                    <input type="text" class="form-control" id ="" name="myHouseNum">
                   </div>
                   <div class="form-group">
-                    <label for="DCasesB"><span><b>BLOCK B</b></span> Covid-19 cases:</label>
-                    
-                    <input type="number" class="form-control" id="DCasesB1" placeholder="Example: 1,2,3,4...">
-                  </div>
-                  <br>
-                  <h3 id="header1">Month: <?php echo date('F');?> </h3> <!-- Month-->
-                  <p id="subtotal">Update the monthly number of cases here.</p>
-
-                    <div class="form-group">
-                    <label for="MCases"><span><b>OVERALL</b></span> Covid-19 cases:</label>
-                    
-                    <input type="number" class="form-control" id="MCases1" placeholder="Example: 1,2,3,4...">
+                    <label for="time">When does the person's quarantine start?</label>
+                    <input type="datetime-local" class="form-control" id="time" name="myQuarantineStarts">
                   </div>
                   <div class="form-group">
-                    <label for="MCasesA"><span><b>BLOCK A</b></span> Covid-19 cases:</label>
-                    
-                    <input type="number" class="form-control" id="MCasesA1" placeholder="Example: 1,2,3,4...">
-                  </div>
-                  <div class="form-group">
-                    <label for="MCasesB"><span><b>BLOCK B</b></span> Covid-19 cases:</label>
-                    
-                    <input type="number" class="form-control" id="MCasesB1" placeholder="Example: 1,2,3,4...">
-                  </div>
+                   <label for="time">When does the person's quarantine end?</label>
+                    <input type="datetime-local" class="form-control" id="time" name="myQuarantineEnds">
+                  </div><br>
                   <button type="submit" class="btn btn-primary" onclick="getInputValue();">Submit</button>
                   <script>
 
                     function getInputValue(){
-                        // Selecting the input element and get its value 
-                        var DCasesO = document.getElementById("DCases1").value;
-                        var DCasesA = document.getElementById("DCasesA1").value;
-                        var DCasesB = document.getElementById("DCasesB1").value;
-                        var MCasesO = document.getElementById("MCases1").value;
-                        var MCasesA = document.getElementById("MCasesA1").value;
-                        var MCasesB = document.getElementById("MCasesB1").value;
-                        
                         // Displaying the value
-                        alert("You have submitted:\n"+"Daily Cases:"+DCasesO+"\nDaily Cases Block A:"+DCasesA+"\nDaily Cases Block B:"+DCasesB+"\nMonthly Cases:"+MCasesO+"\nMonthly Cases Block A:"+MCasesA+"\nMonthly Cases Block B:"+MCasesB);
+                        alert("You have submitted the Covid-19 report");
                     }
                 </script>
                 </form>

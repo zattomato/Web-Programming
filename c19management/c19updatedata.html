@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- icon link -->
     <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
+    
+    <link rel="stylesheet" href="DataTables/datatables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
+    <script src="js/script.js"></script>
+
     <!-- CSS link --> 
     <link rel="stylesheet" href="../css/c19.css">
     <link href="../css/main.css" rel="stylesheet">
@@ -199,7 +208,7 @@
       </section>
 
       <!--update-->  
-
+      
       <section> <!-- Update Daily C19 Cases-->
         <div class="container-lg my-lg-5" >
         
@@ -208,7 +217,141 @@
             <h2 id="updatedata" class="mb-2 gap-5 text-dark">UPDATE COVID-19 DATA</h2>
             <hr>
             
-            asdasd
+            <div class="container py-5 h-100">
+              <div class="row">
+                  <div class="col-md-12" id="msg"></div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <table class="table table-hover table-bordered table-striped" id="authors-tbl">
+                          <thead>
+                              <tr class="bg-dark text-light bg-gradient bg-opacity-150">
+                                  <th class="px-1 py-1 text-center">Report ID</th>
+                                  <th class="px-1 py-1 text-center">Username</th>
+                                  <th class="px-1 py-1 text-center">Phone Num.</th>
+                                  <th class="px-1 py-1 text-center">Quarantine Start</th>
+                                  <th class="px-1 py-1 text-center">Quarantine End</th>
+                                  <th class="px-1 py-1 text-center">Type</th>
+                                  <th class="px-1 py-1 text-center">Validation</th>
+                                  <th class="px-1 py-1 text-center">Action</th>
+                              </tr>
+                          </thead>
+                          <tfoot>
+                              <tr class="bg-dark text-light bg-gradient bg-opacity-150">
+                                <th class="px-1 py-1 text-center">Report ID</th>
+                                <th class="px-1 py-1 text-center">Username</th>
+                                <th class="px-1 py-1 text-center">Phone Num.</th>
+                                <th class="px-1 py-1 text-center">Quarantine Start</th>
+                                <th class="px-1 py-1 text-center">Quarantine End</th>
+                                <th class="px-1 py-1 text-center">Type</th>
+                                <th class="px-1 py-1 text-center">Validation</th>
+                                <th class="px-1 py-1 text-center">Action</th>
+                              </tr>
+                          </tfoot>
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <!-- Add Modal -->
+          <div class="modal fade" id="add_modal" data-bs-backdrop="static">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">Add Author</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="container-fluid">
+                              <form action="" id="new-author-frm">
+                                  <div class="form-group">
+                                      <label for="first_name" class="control-label">First Name</label>
+                                      <input type="text" class="form-control rounded-0" id="first_name" name="first_name" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="last_name" class="control-label">Last Name</label>
+                                      <input type="text" class="form-control rounded-0" id="last_name" name="last_name" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="email" class="control-label">Email</label>
+                                      <input type="text" class="form-control rounded-0" id="email" name="email" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="birthdate" class="control-label">Date of Birth</label>
+                                      <input type="date" class="form-control rounded-0" id="birthdate" name="birthdate" required>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary" form="new-author-frm">Save</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- /Add Modal -->
+          <!-- Edit Modal -->
+          <div class="modal fade" id="edit_modal" data-bs-backdrop="static">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">Edit Author's Details</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="container-fluid">
+                              <form action="" id="edit-author-frm">
+                                  <input type="hidden" name="id">
+                                  <div class="form-group">
+                                      <label for="first_name" class="control-label">First Name</label>
+                                      <input type="text" class="form-control rounded-0" id="first_name" name="first_name" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="last_name" class="control-label">Last Name</label>
+                                      <input type="text" class="form-control rounded-0" id="last_name" name="last_name" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="email" class="control-label">Email</label>
+                                      <input type="text" class="form-control rounded-0" id="email" name="email" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="birthdate" class="control-label">Date of Birth</label>
+                                      <input type="date" class="form-control rounded-0" id="birthdate" name="birthdate" required>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary" form="edit-author-frm">Save</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- /Edit Modal -->
+          <!-- Delete Modal -->
+          <div class="modal fade" id="delete_modal" data-bs-backdrop="static">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">Confirm</h5>
+                      </div>
+                      <div class="modal-body">
+                          <div class="container-fluid">
+                              <form action="" id="delete-author-frm">
+                                  <input type="hidden" name="id">
+                                  <p>Are you sure to delete <b><span id="name"></span></b> from the list?</p>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-danger" form="delete-author-frm">Yes</button>
+                          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- /Delete Modal -->
 
             <hr>
             <form id="update" action="" method="post">

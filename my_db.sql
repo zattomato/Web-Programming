@@ -35,7 +35,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `users` and 'quarantine_report'
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
@@ -43,6 +43,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 (9, 'samad', '1234', 'user'),
 (10, 'lee', '123', 'user'),
 (11, 'abc', '123', 'user');
+
 
 --
 -- Indexes for dumped tables

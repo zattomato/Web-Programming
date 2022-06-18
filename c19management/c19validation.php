@@ -1,4 +1,27 @@
-<!--insert footer, header-->
+<?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "my_db";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+
+  $sql = 'SELECT * 
+          FROM quarantine_report
+          ORDER BY validate';
+
+  $result = mysqli_query($conn, $sql);
+  #$quarantine_report = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+  
+  
+ print_r($quarantine_report);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,10 +116,17 @@
                   <hr>
                 </div>
                 <div class="row">
+                  
+
+                  
+
+
+                  
+
+
                   <table class="table table-bordered border-secondary table-striped table-hover bg-light text-center table-responsive">
                     <thead>
                     <tr>
-                        <th scope="col"></th>
                         <th scope="col">Report ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Type of Case</th>
@@ -107,32 +137,25 @@
                     </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>1312</td>
-                        <td>Abdul Faris Jabba</td>
-                        <td>Covid-19 Positive</td>
-                        <td>25/4/2022</td>
-                        <td>2/5/2022</td>
-                        <td>Validated</td>
-                        <td>
-                          <button class="btn btn-primary" onclick="">View Profile</button>                          
-                        </td>
+                    <?php 
+                    if($result->num_rows>0){
+                      while($row = $result-> fetch_assoc()){
+                        echo "<tr><td>" . $row['report_id'] . "</td><td>" . $row['report_status'] . "</td><td>" . $row['q_start_date'] . "</td><td>" . $row['q_end_date'] . "</td><td>" . $row['validate'] . "</td><td>" . $row['report_id'] . "</td>"
+                        ;
+                      }
+                    } else {
+                      echo "All Covid-19 and Quarantine have been validated";
+                    }
+                    mysqli_close($conn);
+                  ?>
+                    <td>
+                      <button class="btn btn-primary" onclick="">View Profile</button>                          
+                    </td>
+                  </tr>
                     </tbody>
-                    <tbody>
-                      <tr>
-                      <th scope="row">2</th>
-                      <td>1312</td>
-                      <td>Abdul Faris Jabba</td>
-                      <td>Covid-19 Positive</td>
-                      <td>25/4/2022</td>
-                      <td>2/5/2022</td>
-                      <td>Validated</td>
-                      <td>
-                        <button class="btn btn-primary" onclick="">View Profile</button>                          
-                      </td>
-                  </tbody>
+                    
                 </table> 
+                
                 </div>
               </div>
           </div>

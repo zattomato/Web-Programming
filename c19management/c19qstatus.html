@@ -15,61 +15,13 @@
     <!-- icon link -->
     <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
     <!-- CSS link --> 
-    <link rel="stylesheet" href="../css/c19.css">
-    <link href="../css/main.css" rel="stylesheet">
-  
-    <!--Google Charts-->
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    
-    <!--Covid-19 Cases Chart-->
-    <script>
-      google.charts.load('current', {packages: ['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        // Define the chart to be drawn.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Element');
-        data.addColumn('number', 'Percentage');
-        data.addRows([
-          ['Nitrogen', 0.78],
-          ['Oxygen', 0.21],
-          ['Other', 0.01]
-        ]);
-
-        // Instantiate and draw the chart.
-        var chart = new google.visualization.PieChart(document.getElementById('myPieChart'));
-        chart.draw(data, null);
-      }
-    </script>
-    
-    <!--Quarantine Cases Chart-->
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
+    <link rel="stylesheet" href="css/c19.css">
+    <link href="css/main.css" rel="stylesheet" />
 
     <title>Casa Idaman C19 Report</title>
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
 
   <body class="bg-dark">
@@ -98,13 +50,13 @@
                 <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
               </li>
               <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid Reports</a>
+                <a class="nav-link text-white nav-list " href="../c19management/c19report.html">Covid Reports</a>
               </li>
               <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19validation.html">Covid Validation</a>
+                <a class="nav-link text-white nav-list " href="../c19management/c19validation.html">Covid Validation</a>
               </li>
               <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19updatedata.html">Covid Data Update</a>
+                <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.html">Covid Data Update</a>
               </li>
               <li class="nav-item navi">
                 <a class="nav-link text-white" href="../main.html">Logout</a>
@@ -115,12 +67,12 @@
       </nav>
     
     
-    </div>
+</div>
     
     <!-- header section ends  -->
   
     <main>
-      <section>
+      <section class='container'>
         <!--Add Data of covid 19 Daily Cases-->
         <!--Put basic line chart for the the track record of covid 19 cases
           covid19 cases
@@ -130,50 +82,20 @@
         
           use highcharts.js -->
       </section>
-      <section>
-        <div class="container-lg" id="DataVisualiser">
-          <div class="row">
-            <h1 class="mb-3 text-white">Covid-19 Data Updates</h1>
-            <p class="text-white">Daily and monthly cases of Casa Idaman's Covid-19 positive and close contact's quarantine data.</p>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col">
-              <h3 class="text-white text-center">Covid-19 Cases</h3>
-              <!--Charts from database-->
-              <div id="myPieChart"></div>
-              <p class="text-white">Total Number of Covid-19 Cases: </p>
-              <p class="text-white" >Month: </p>
-              <p class="text-white">Today: </p>
 
-            </div>
-            <div class="col">
-              <h3 class="text-white text-center">Quarantine Cases</h3>
-              <!--Chart from database-->
-              <div id="piechart"></div>
-              <p class="text-white">Total Number of People Under Quarantine: </p>
-              <p class="text-white">Month: </p>
-              <p class="text-white">Today: </p>
-
-            </div>
-          </div>
-          <hr>
-      </section>
-
-      <!--update-->  
-
+      <!--update-->
       <section> <!-- Update Daily C19 Cases-->
-        <div class="container-lg my-lg-5" >
+        <div class="container my-5" >
         
-          <div id="updatedataform" class="col gap-3">
-            
-            <h2 id="updatedata" class="mb-2 gap-5 text-dark">UPDATE COVID-19 STATUS</h2>
+          <div class="col gap-3">
+            <hr>
+            <h4 class="mb-3 gap-5 text-white">Update Daily Covid-19 Status</h4>
             
             <form id="update" action="" method="post">
-              <div class="row g-3 gap-2" style="padding: 20px; color: black;">
+              <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
 
                 <form>
-                  
+                  <br>
                   <h3>Today: <?php //Today's Day and Date
                     echo date('l'); 
                     echo date(" - d/m/Y");

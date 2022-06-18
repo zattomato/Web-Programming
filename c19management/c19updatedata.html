@@ -15,13 +15,106 @@
     <!-- icon link -->
     <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
     <!-- CSS link --> 
-    <link rel="stylesheet" href="css/c19.css">
-    <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/c19.css">
+    <link href="../css/main.css" rel="stylesheet">
+  
+    <!--Google Charts-->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <!--Covid-19 Cases Chart-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Covid Cases');
+
+      data.addRows([
+        [1,  37.8],
+        [2,  30.9],
+        [3,  25.4],
+        [4,  11.7],
+        [5,  11.9],
+        [6,   8.8],
+        [7,   7.6],
+        [8,  12.3],
+        [9,  16.9],
+        [10, 12.8],
+        [11,  5.3],
+        [12,  6.6],
+        [13,  4.8],
+        [14,  4.2],
+        [15,  37.8],
+        [16,  30.9],
+        [17,  25.4],
+        [18,  11.7],
+        [19,  11.9],
+        [20,   8.8],
+        [21,   7.6],
+        [22,  12.3],
+        [23,  16.9],
+        [24, 12.8],
+        [25,  5.3],
+        [26,  6.6],
+        [27,  4.8],
+        [28,  4.2],
+        [29,  4.8],
+        [30,  4.2]
+      ]);
+
+      var options = {
+        chart: {
+        },
+        
+        height: 250,
+        backgroundColor: '#f8f9fa',
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+    
+    
+    <!--Quarantine Cases Chart-->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          
+          height: 250,
+          backgroundColor: '#f8f9fa'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 
     <title>Casa Idaman C19 Report</title>
-
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
 
   <body class="bg-dark">
@@ -50,48 +143,76 @@
                 <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
               </li>
               <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid Reports</a>
+                <a class="nav-link text-white nav-list " href="../c19management/c19report.html">Covid Reports</a>
+              </li>
+              <li class="nav-item navi">
+                <a class="nav-link text-white nav-list " href="../c19management/c19validation.html">Covid Validation</a>
+              </li>
+              <li class="nav-item navi">
+                <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.html">Covid Data Update</a>
               </li>
               <li class="nav-item navi">
                 <a class="nav-link text-white" href="../main.html">Logout</a>
               </li>
-    
-    
             </ul>
           </div>
         </div>
       </nav>
     
     
-</div>
+    </div>
     
     <!-- header section ends  -->
   
     <main>
-      <section class='container'>
-        <!--Add Data of covid 19 Daily Cases-->
-        <!--Put basic line chart for the the track record of covid 19 cases
-          covid19 cases
-          num of people in quarantine
-          
-          Put column chart for the amount of people in quarantine
-        
-          use highcharts.js -->
+      <section>
+        <div class="container-lg" id="DataVisualiser">
+          <div class="row">
+            <h1 class="mb-3 text-white">Covid-19 Data Updates</h1>
+            <p id="total" class="text-white">Daily and monthly cases of Casa Idaman's Covid-19 positive and close contact's quarantine data.</p>
+          </div>
+          <br>
+          <div id="roundedrow" class="row bg-light gap-3">
+            <div class="col p-5">
+              <h3 id="header2" class="text-center">COVID-19 CASES</h3>
+              <br>
+              <!--Charts from database-->
+              <div id="line_top_x"></div>
+              <br>
+              <p id="total" >Total Number of Covid-19 Cases: </p>
+              <p id="subtotal" >Month: </p>
+              <p id="subtotal" >Today: </p>
+
+            </div>
+            <div class="col p-5">
+              <h3 id="header2" class="text-center">QUARANTINE CASES</h3>
+              <br>
+              <!--Chart from database-->
+              <div id="piechart"></div>
+              <br>
+              <p id="total" >Total Number of People Under Quarantine: </p>
+              <p id="subtotal" >Month: </p>
+              <p id="subtotal" >Today: </p>
+
+            </div>
+          </div>
+          <hr>
       </section>
 
-      <!--update-->
+      <!--update-->  
+
       <section> <!-- Update Daily C19 Cases-->
-        <div class="container my-5" >
+        <div class="container-lg my-lg-5" >
         
-          <div class="col gap-3">
-            <hr>
-            <h4 class="mb-3 gap-5 text-white">Update Daily Covid-19 Status</h4>
+          <div id="updatedataform" class="col gap-3 bg-light">
             
+            <h2 id="updatedata" class="mb-2 gap-5 text-dark">UPDATE COVID-19 STATUS</h2>
+            <hr>
             <form id="update" action="" method="post">
-              <div class="row g-3 gap-2 bg-light" style="padding: 20px; color: black;">
+              <div class="row g-3 gap-2" style="padding: 20px; color: black;">
 
                 <form>
-                  <br>
+                  
                   <h3>Today: <?php //Today's Day and Date
                     echo date('l'); 
                     echo date(" - d/m/Y");

@@ -157,7 +157,7 @@ $(function() {
             })
         })
         // Update Data
-    $('#edit-author-frm').submit(function(e) {
+        $('#edit-author-frm').submit(function(e) {
             e.preventDefault()
             $('#edit_modal button').attr('disabled', true)
             $('#edit_modal button[form="edit-author-frm"]').text("saving ...")

@@ -13,7 +13,7 @@
 
   $sql = 'SELECT * 
           FROM quarantine
-          ORDER BY validate DESC';
+          ORDER BY validation ASC';
 
   $result = mysqli_query($conn, $sql);
   #$quarantine_report = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -79,7 +79,7 @@
                 <a class="nav-link text-white nav-list " href="../c19management/c19validation.php">Covid Validation</a>
               </li>
               <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.html">Covid Data Update</a>
+                <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.php">Covid Data Update</a>
               </li>
               <li class="nav-item navi">
                 <a class="nav-link text-white" href="../main.html">Logout</a>
@@ -123,16 +123,26 @@
                         <th scope="col">Type of Case</th>
                         <th scope="col">Quarantine Start Date</th>
                         <th scope="col">Quarantine End Date</th>
+                        <th scope="col">Evidence</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">House Number</th>
                         <th scope="col">Validation Status</th>
-                        <th scope="col">Name</th>
                         <th scope="col">Validation</th>
                     </tr>
                     </thead>
                     <tbody><?php 
                     if($result->num_rows>0){
                       while($row = $result-> fetch_assoc()){
-                        echo "<tr><td>" . $row['report_id'] . "</td><td>" . $row['report_status'] . "</td><td>" . $row['q_start_date'] . 
-                        "</td><td>" . $row['q_end_date'] . "</td><td>" . $row['validate'] . "</td><td>" . $row['report_id'] . "</td><td>" . 
+                        echo "<tr>
+                          <td>" . $row['reportid'] . "</td>
+                          <td>" . $row['stats'] . "</td>
+                          <td>" . $row['quarantineStarts'] . "</td>
+                          <td>" . $row['quarantineEnds'] . "</td>
+                          <td>" . $row['evidence'] . "</td>
+                          <td>" . $row['username'] . "</td>
+                          <td>" . $row['houseNum'] . "</td>
+                          <td>" . $row['validation'] . "</td>
+                          <td>" . 
                         "<form>
                          <input type=\"submit\" value=\"Validate\">
                         </form></td></tr>";

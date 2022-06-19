@@ -85,6 +85,44 @@ CREATE TABLE `visitor_pass` (
   `photo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `facilities`
+--
+
+CREATE TABLE `facilities` (
+  `facilityID` int(255) NOT NULL,
+  `facilityName` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `facilities`
+--
+
+INSERT INTO `facilities` (`facilityID`, `facilityName`) VALUES
+(1, 'Lounge'),
+(2, 'Swimming Pool'),
+(3, 'Gymnasium'),
+(4, 'Barbeque Pit');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reservation`
+--
+
+CREATE TABLE `reservation` (
+  `id` int(11) NOT NULL,
+  `firstName` varchar(50) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `pnumber` varchar(10) NOT NULL,
+  `bookdate` date NOT NULL,
+  `booktime` time NOT NULL,
+  `facilityID` enum('1','2','3','4') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Dumping data for table `visitor_pass`
 --
@@ -115,6 +153,16 @@ ALTER TABLE `visitor_pass`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `facilities`
+  ADD PRIMARY KEY(`facilityID`);
+
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -137,6 +185,8 @@ ALTER TABLE `visitor_pass`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
+ALTER TABLE `reservation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -2,7 +2,7 @@
 require_once('../php/db_conn.php');
 extract($_POST);
 
-$query = $conn->query("INSERT INTO `q_report` (`first_name`,`last_name`,`email`,`birthdate`) VALUE ('{$first_name}','{$last_name}','{$email}','{$birthdate}')");
+$query = $conn->query("INSERT INTO `q_report` (`username`,`houseNum`,`phoneNum`,`qStart`,`qEnd`,`type`) VALUE ('{$username}','{$houseNum}','{$phoneNum}','{$qStart}','{$qEnd}','{$type}')");
 if ($query) {
     $resp['status'] = 'success';
 } else {

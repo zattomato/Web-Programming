@@ -1,7 +1,7 @@
 <?php
 require_once('../php/db_conn.php');
 extract($_POST);
-$query = $conn->query("SELECT * FROM `q_report` where id = '{$reportID}'");
+$query = $conn->query("SELECT * FROM `q_report` where reportID = '{$reportID}'");
 if ($query) {
     $resp['status'] = 'success';
     $resp['data'] = $query->fetch_array();

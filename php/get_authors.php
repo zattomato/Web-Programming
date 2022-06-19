@@ -1,8 +1,8 @@
 <?php
-require_once("./config.php");
+require_once("../php/db_conn.php");
 extract($_POST);
 
-$totalCount = $conn->query("SELECT * FROM `authors` ")->num_rows;
+$totalCount = $conn->query("SELECT * FROM `q_report` ")->num_rows;
 $search_where = "";
 if (!empty($search)) {
     $search_where = " where ";

@@ -1,8 +1,8 @@
 <?php
-require_once('config.php');
+require_once('../php/db_conn.php');
 extract($_POST);
 
-$query = $conn->query("INSERT INTO `authors` (`first_name`,`last_name`,`email`,`birthdate`) VALUE ('{$first_name}','{$last_name}','{$email}','{$birthdate}')");
+$query = $conn->query("INSERT INTO `q_report` (`first_name`,`last_name`,`email`,`birthdate`) VALUE ('{$first_name}','{$last_name}','{$email}','{$birthdate}')");
 if ($query) {
     $resp['status'] = 'success';
 } else {

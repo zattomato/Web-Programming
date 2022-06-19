@@ -1,8 +1,8 @@
 <?php
-require_once('config.php');
+require_once('../php/db_conn.php');
 extract($_POST);
 
-$delete = $conn->query("DELETE FROM `authors` where id = '{$id}'");
+$delete = $conn->query("DELETE FROM `q_report` where id = '{$id}'");
 if ($delete) {
     $resp['status'] = 'success';
 } else {

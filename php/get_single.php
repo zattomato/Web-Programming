@@ -1,7 +1,7 @@
 <?php
-require_once('config.php');
+require_once('../php/db_conn.php');
 extract($_POST);
-$query = $conn->query("SELECT * FROM `authors` where id = '{$id}'");
+$query = $conn->query("SELECT * FROM `q_report` where id = '{$reportID}'");
 if ($query) {
     $resp['status'] = 'success';
     $resp['data'] = $query->fetch_array();

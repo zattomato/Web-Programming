@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+include("../php/db_conn.php");
+
+    $report = "SELECT reportid, username, houseNum, stats, quarantineStarts, quarantineEnds FROM quarantine";
+    $data = mysqli_query($conn, $report);    
+
+?>
 <html>
     
 <head>
@@ -36,19 +45,18 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
             <div style="display: flex; align-items:center;">
-                <a class="navbar-brand" href="../user/home.html"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
+                <a class="navbar-brand" href="../user/home.php"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
                 <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class=" navbar-toggler-icon "><i class="fas fa-bars"
                         style="color:#fff; font-size:28px;"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item navi">
-                        <a class="nav-link text-white nav-list " href="../user/home.html">Home</a>
+                        <a class="nav-link text-white nav-list " href="../user/home.php">Home</a>
                     </li>
                     <li class="nav-item navi">
                         <a class="nav-link text-white" href="../user/faci.html">Facilities</a>
@@ -58,21 +66,19 @@
                     </li>
                     <li class="nav-item navi">
 
-                        <a class="nav-link text-white" href="../user/covid-19 status.html">Covid-19 Status</a>
+                        <a class="nav-link text-white" href="../user/covid-19 status.php">Covid-19 Status</a>
 
                     </li>
                     <li class="nav-item navi">
 
-                        <a class="nav-link text-white" href="../user/profile.html"><i
-                                class="fa-solid fa-circle-user"></i> Sam</a>
-
+                        <a class="nav-link text-white nav-list " style="text-transform:capitalize;" href="../user/profile.php"><i class="fa-solid fa-circle-user"> </i>
+                        <?php
+                        echo $_SESSION['username']; ?> </a>
+                    
                     </li>
-
                     <li class="nav-item navi">
-                        <a class="nav-link text-white" href="../main.html">Logout</a>
+                        <a class="nav-link text-white" href="../Login System/logout.php">Logout</a>
                     </li>
-
-
                 </ul>
             </div>
         </div>
@@ -106,7 +112,7 @@
                           </h4>
                         </div>
                       </div><br>
-                    <a href="../user/covid-19 cases.html" class="btn btn-primary"  role="button" >Show Covid-19 cases</a> 
+                    <a href="../Covid-19 User/covid-19cases.php" class="btn btn-primary"  role="button" >Show Covid-19 cases</a> 
                 </div>
             </div>
             </div>
@@ -116,26 +122,40 @@
                 <div class="card-body p-5">
                     <h3 >Covid-19 Quarantine Report</h3><br>
                     <h5>Report your quarantine status here.</h5><br>
-                    <a href="../user/covid-19 report.html" class="btn btn-primary"  role="button" >Add a report</a>
+                    <a href="../Covid-19 User/covid-19quarantinereport.php" class="btn btn-primary"  role="button" >Add a report</a>
                     <br><br>
                     <h6>Your report:</h6>
                     <table class="table table-secondary table-striped table-bordered ">
                         <thead>
                         <tr>
-                            <th scope="col"></th>
                             <th scope="col">Report ID</th>
+                            <th scope="col">House Number</th>
+                            <th scope="col">Type of Case</th>
                             <th scope="col">Quarantine Start Date</th>
                             <th scope="col">Quarantine End Date</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Update/Delete Record</th>
                         </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>1312</td>
-                            <td>25/4/2022</td>
-                            <td>2/5/2022</td>
-                            <td>Approved</td>
+                        <?php
+                        while($row = mysqli_fetch_array($data)){
+                            if($_SESSION['username']==$row['username']){
+                                echo"
+                                <tr>                   
+                                    <td>".$row['reportid']."</td>
+                                    <td>".$row['houseNum']."</td>
+                                    <td>".$row['stats']."</td>
+                                    <td>".$row['quarantineStarts']."</td>
+                                    <td>".$row['quarantineEnds']."</td>
+                                    <td>
+                                        <a href='../Covid-19 User/covid-19updatereport.php?reportid=".$row['reportid']."' class='btn btn-primary btn-sm' input type = 'submit' >Update</a>
+                                        <a href='../php/delete-report.php?reportid=".$row['reportid']."' class='btn btn-danger btn-sm' input type='submit' onclick=\"javascript: return confirm('Are you sure to delete this record?');\" >Delete</a>
+                                    </td>                                                                                                               
+                                </tr>
+                                "; 
+                            }
+                        }
+                        ?>
                         </tbody>
                     </table> 
                 </div>
@@ -179,11 +199,11 @@
         </div>
     
         <div class="links">
-            <a href="../user/home.html">home</a>
+            <a href="../user/home.php">home</a>
             <a href="../user/faci.html">facilities</a>
             <a href="../user/visitor.html">visitor</a>
-            <a href="../user/covid-19 status.html">covid-19 status</a>
-            <a href="../user/profile.html">Profile</a>
+            <a href="../user/covid-19 status.php">covid-19 status</a>
+            <a href="../user/profile.php">Profile</a>
     
         </div>
     

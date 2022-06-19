@@ -1,6 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?php
+session_start();
+include "../php/db_conn.php";
+
+if (!(isset($_SESSION['username']) && isset($_SESSION['id']))) {
+  header("Location: home.php");
+}
+
+if (isset($_POST['nu'])) {
+
+	function validate($data){
+    $data = trim($data);
+	   $data = stripslashes($data);
+	   $data = htmlspecialchars($data);
+	   return $data;
+	}
+
+	$nu = validate($_POST['nu']);
+    
+    if(empty($nu)){
+      header("Location: changeUser.php?error=Please enter new username");
+	  exit();
+    }
+    else {
+
+        $sql = "SELECT username
+                FROM users WHERE 
+                id='{$_SESSION["id"]}'";
+        $result = mysqli_query($conn, $sql);
+        if($result){
+        	
+        	$sql_2 = "UPDATE users
+        	          SET username='$nu'
+        	          WHERE id='{$_SESSION["id"]}'";
+        	mysqli_query($conn, $sql_2);
+        	header("Location: profile.php?success=Your username has been changed successfully");
+	        exit();
+
+        }else {
+        	header("Location: editprofile.php?error=Cannot update username");
+	        exit();
+        }
+
+    }
+
+    
+}
+
+  ?>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,19 +69,19 @@
   <link rel="icon" href="../pic/casaidaman.png" type="image/icon type">
 
     <!-- CSS link  -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/changePassword.css">
 
     <title>User Profile</title>
-</head>
+  </head>
 <body class="text-black" style="background-color:rgb(40, 38, 38);">
 
-<br><br><br><br>
+  <br><br><br><br>
 
-<header class="container">
+  <header class="container">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
             <div style="display: flex; align-items:center;">
-                <a class="navbar-brand" href="../user/home.html"><img class="logo" src="../pic/casaidaman.png" width="180px"
+                <a class="navbar-brand" href="../user/home.php"><img class="logo" src="../pic/casaidaman.png" width="180px"
                         alt=""></a>
                 <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
             </div>
@@ -44,7 +94,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item navi">
-                        <a class="nav-link text-white nav-list " href="../user/home.html">Home</a>
+                        <a class="nav-link text-white nav-list " href="../user/home.php">Home</a>
                     </li>
                     <li class="nav-item navi">
                         <a class="nav-link text-white" href="../user/faci.html">Facilities</a>
@@ -56,15 +106,20 @@
 
                         <a class="nav-link text-white" href="../user/c19status.html">Covid-19 Status</a>
 
-                    </li>
-                    <li class="nav-item navi">
-                    
-                      <a class="nav-link text-white" href="../user/profile.html"><i class="fa-solid fa-circle-user"></i>  Sam</a>
-                    
+
                     </li>
                     
                     <li class="nav-item navi">
-                        <a class="nav-link text-white" href="../main.html">Logout</a>
+                    
+                      <a class="nav-link text-white" href="../user/profile.php"><i class="fa-solid fa-circle-user"></i>  
+                      <?php
+                        echo $_SESSION['username']; ?> 
+                      </a>
+                    
+                    </li>
+                    
+                    <li class="nav-item navi">
+                        <a class="nav-link text-white" href="../main.php">Logout</a>
                     </li>
 
 
@@ -72,89 +127,34 @@
             </div>
         </div>
     </nav>
-</header>
+  </header>
+<!-- body section starts  -->
+<body>
+    <form class="userpass" action="" method="post" enctype="multipart/form-data" style="width: 500px;">
+     	
+     	<?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php } ?>
 
-<div class="container bootstrap snippets bootdey">
-    
-      <hr>
-	<div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
-          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
-          <h6 style="color: white;">Upload a different photo</h6>
-          
-          <input type="file" class="form-control">
-        </div>
-      </div>
+     	<?php if (isset($_GET['success'])) { ?>
+            <p class="success"><?php echo $_GET['success']; ?></p>
+        <?php } ?>
       
-      <!-- edit form column -->
-      <div class="col-md-9 personal-info">
-        
-        <h3 style="color:white;">Edit Personal Info</h3>
-        
-        <div class="card mb-3" >
-            <div class="card body" style="padding:0.3cm">
-        
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Full Name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Email:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Phone Number:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Home Number:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Twitter:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Instagram:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Facebook:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-sm-12">
-              <a class="btn btn-info " target="__blank" href="profile.html">Save Changes</a>
-            </div>
-          </div>
-        </form>
-    </div>
-</div>
-      </div>
-  </div>
-</div>
-<hr>
-<!-- footer section starts  -->
 
-<section class="footer">
+      <h2>Change Username</h2>
+
+     	<label>New Username</label>
+     	<input type="username" 
+     	       name="nu" 
+     	       placeholder="New Username">
+
+     	<button type="submit" style="color: white; background-color: #008CBA;" href="profile.php">CHANGE</button>
+          
+     </form>
+</body>
+  <!-- footer section starts  -->
+<footer>
+  <section class="footer">
 
   <div class="share">
     <a href="https://www.facebook.com/groups/casaidamangroup" class="fab fa-facebook-f"></a>
@@ -175,12 +175,14 @@
 
   <div class="credit">Created by <span>Web Programming Team 4</span> | all rights reserved</div>
 
-</section>
+  </section>
+        </footer>
+  <!-- footer section ends -->
 
-<!-- footer section ends -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-</body>
-</html>
+  </body>
+  </html><?php 
+  
+  

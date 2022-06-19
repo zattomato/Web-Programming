@@ -44,6 +44,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 (10, 'lee', '123', 'user'),
 (11, 'abc', '123', 'user');
 
+
 --
 -- Indexes for dumped tables
 --

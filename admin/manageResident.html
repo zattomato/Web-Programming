@@ -17,7 +17,7 @@
 
 
     <!-- CSS link  -->
-    <link rel="stylesheet" href="manageResidence.css">
+    <link rel="stylesheet" href= "manageResidence.css">
 
     <title>Manage Residents</title>
 </head>
@@ -146,21 +146,22 @@
     </table>
     <div class="form-container">
         <h3>Enter The Residents Details:</h3>
-        <form class="reg-form" onsubmit="return false;">
+        <form class="reg-form" onsubmit="return false;" method="POST" action="includes/register.inc.php">
             <label for="name">Name:</label> <br>
-            <input type="text" id="name"> <br>
+            <input type="text" id="name" name="name" required> <br>
             <label for="phone">phone:</label> <br>
-            <input type="text" id="phone"> <br>
+            <input type="text" id="phone" name="phone" required> <br>
             <label for="email">Email:</label> <br>
-            <input type="text" id="email"> <br>
+            <input type="text" id="email" name="email" required> <br>
             <label for="name">Unit:</label> <br>
-            <input type="text" id="unit"> <br>
+            <input type="text" id="unit" name="unit" required> <br>
             <br>
             <button id="submit-btn" type="submit" >Submit</button>
             <button id="cancel-btn" type="submit" >Cancel</button>
             
         </form>
     </div>
+   
 </div>
 <footer class="footer">
     <div class="share">

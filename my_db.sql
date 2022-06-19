@@ -100,7 +100,9 @@ INSERT INTO `visitor_pass` (`id`, `email`, `name`, `address`, `ic`, `phone`, `ph
 -- Indexes for table `quarantine`
 --
 ALTER TABLE `quarantine`
-  ADD PRIMARY KEY (`reportid`);
+  ADD PRIMARY KEY (`reportid`),
+  ADD `validation` VARCHAR(255) NULL DEFAULT '\'unvalidated\' ' AFTER `quarantineEnds`;
+
 
 --
 -- Indexes for table `users`

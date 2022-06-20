@@ -22,7 +22,7 @@ include("db_conn.php");
         }  
     }
     else{
-        header("Location: ../admin/c19management.php");
+        header("Location: ../c19management/c19management.php");
         
     }
 ?>

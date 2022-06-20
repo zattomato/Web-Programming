@@ -36,50 +36,45 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) ?>
     
     <header class="container ">
     
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
-            <div class="container">
-                <div style="display: flex; align-items:center;">
-                    <a class="navbar-brand" href="../user/home.html"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
-                    <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
-                </div>
-    
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class=" navbar-toggler-icon "><i class="fas fa-bars"
-                            style="color:#fff; font-size:28px;"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="../user/home.html">Home</a>
-                        </li>
-                        <li class="nav-item navi">
-                            <a class="nav-link text-white" href="../user/faci.html">Facilities</a>
-                        </li>
-                        <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="../user/visitor.html">Visitor</a>
-                        </li>
-                        <li class="nav-item navi">
-    
-                            <a class="nav-link text-white" href="../user/covid-19 status.html">Covid-19 Status</a>
-    
-                        </li>
-                        <li class="nav-item navi">
-    
-                            <a class="nav-link text-white" href="../user/profile.html"><i
-                                    class="fa-solid fa-circle-user"></i> Sam</a>
-    
-                        </li>
-    
-                        <li class="nav-item navi">
-                            <a class="nav-link text-white" href="../main.html">Logout</a>
-                        </li>
-    
-    
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
+                    <div class="container">
+                        <div style="display: flex; align-items:center;">
+                            <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
+                            <h3 class="title" style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
+                        </div>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=" navbar-toggler-icon "><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto ">
+                                <li class="nav-item navi">
+                                    <a class="nav-link text-white nav-list " href="../user/home.php">Home</a>
+                                </li>
+                                <li class="nav-item navi">
+                                    <a class="nav-link text-white" href="../user/faci.php">Facilities</a>
+                                </li>
+                                <li class="nav-item navi">
+                                    <a class="nav-link text-white nav-list " href="./visitor.php">Visitor</a>
+                                </li>
+                                <li class="nav-item navi">
+                                    <a class="nav-link text-white" href="./covid-19 status.php">Covid-19 Status</a>
+                                </li>
+                                <li class="nav-item navi">
+                                    <a class="nav-link text-white nav-list " style="text-transform:capitalize;" href="../user/profile.php"><i class="fa-solid fa-circle-user"> </i>
+                                        <?php
+                                        echo $_SESSION['username']; ?>
+                                    </a>
+                                </li>
+                                </li>
+                                <li class="nav-item navi"><a class="nav-link text-white" href="../Login System/logout.php">Logout</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
     
     
     </header>

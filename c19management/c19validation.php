@@ -53,41 +53,39 @@
     <!-- Navigation Bar -->
     <div class="container "> <!-- Navigation Bar-->
     
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
-          <div style="display: flex; align-items:center;">
-            <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
-            <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
-          </div>
-    
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=" navbar-toggler-icon "><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto ">
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/management.html">Home</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../c19management/c19report.html">Covid Reports</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../c19management/c19validation.php">Covid Validation</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.php">Covid Data Update</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white" href="../main.html">Logout</a>
-              </li>
-            </ul>
-          </div>
+            <div style="display: flex; align-items:center;">
+                <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
+                <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=" navbar-toggler-icon "><i class="fas fa-bars"
+                        style="color:#fff; font-size:28px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item navi">
+                        <a class="nav-link text-white nav-list " href="../admin/management.html">Home</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white nav-list " href="../c19management/c19management.php">Covid Reports</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.php">Covid Data Update</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white" href="../Login System/logout.php">Logout</a>
+                      </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
     
     
     </div>

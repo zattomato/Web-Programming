@@ -106,7 +106,7 @@ include("../php/db_conn.php");
                         <h4>
                           Today's Covid-19 Cases: <?php echo $cases['total']; ?>
                         </h4>
-                        <?php }}?>   
+                        <?php }}?>
                       </div>
                       <div class="row">
                       </div><br>

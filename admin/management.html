@@ -49,16 +49,20 @@
                             <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
                           </li>
                           <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="../c19management/c19report.html">Covid Reports</a>
+                            <a class="nav-link text-white nav-list " href="../c19management/c19management.php">Covid Reports</a>
                           </li>
                           <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="../c19management/c19validation.html">Covid Validation</a>
+                            <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.php">Covid Data Update</a>
                           </li>
                           <li class="nav-item navi">
-                            <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.html">Covid Data Update</a>
-                          </li>
+                                        <a class="nav-link text-white nav-list " style="text-transform:capitalize;" href="../user/profile.php"><i class="fa-solid fa-circle-user"> </i>
+                                            <?php
+                                            echo $_SESSION['username']; ?>
+                                        </a>
+                                    </li>
+                                    
                           <li class="nav-item navi">
-                            <a class="nav-link text-white" href="../main.html">Logout</a>
+                            <a class="nav-link text-white" href="../Login System/logout.php">Logout</a>
                           </li>
                     </ul>
                 </div>

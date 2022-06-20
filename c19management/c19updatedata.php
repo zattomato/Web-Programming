@@ -56,7 +56,7 @@ $data = mysqli_query($conn, $report);
     
     <header class="container ">
     
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
             <div style="display: flex; align-items:center;">
                 <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
@@ -80,13 +80,17 @@ $data = mysqli_query($conn, $report);
                         <a class="nav-link text-white nav-list " href="../c19management/c19management.php">Covid Reports</a>
                       </li>
                       <li class="nav-item navi">
-                        <a class="nav-link text-white nav-list " href="../c19management/c19validation.php">Covid Validation</a>
-                      </li>
-                      <li class="nav-item navi">
                         <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.php">Covid Data Update</a>
                       </li>
                       <li class="nav-item navi">
-                        <a class="nav-link text-white" href="../main.html">Logout</a>
+                                    <a class="nav-link text-white nav-list " style="text-transform:capitalize;" href="../user/profile.php"><i class="fa-solid fa-circle-user"> </i>
+                                        <?php
+                                        echo $_SESSION['username']; ?>
+                                    </a>
+                                </li>
+                                
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white" href="../Login System/logout.php">Logout</a>
                       </li>
                 </ul>
             </div>
@@ -107,7 +111,7 @@ $data = mysqli_query($conn, $report);
           </div>
           <div class="justify-content-md-end">
               <a href="../Covid-19 User/covid-19cases.php" class="btn btn-primary" role="button">Show Covid-19 cases</a>
-            </div>
+          </div>
           <br>
       </section>
 

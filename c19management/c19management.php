@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+include("../php/db_conn.php");
+
+    $report = "SELECT reportid, username, houseNum, stats, quarantineStarts, quarantineEnds FROM quarantine";
+    $data = mysqli_query($conn, $report);   
+    
+    $sql = "SELECT * FROM coviddailycases";
+    $run = mysqli_query($conn, $sql);
+
+    date_default_timezone_set('Asia/Kuala_Lumpur');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,41 +42,39 @@
     
     <header class="container "> <!-- Navigation Bar-->
     
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light  navigation bg-transparent   ">
         <div class="container">
-          <div style="display: flex; align-items:center;">
-            <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
-            <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
-          </div>
-    
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=" navbar-toggler-icon "><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto ">
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/management.html">Home</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19management.html">Covid Reports</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19validation.html">Covid Validation</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white nav-list " href="../admin/c19updatedata.html">Covid Data Update</a>
-              </li>
-              <li class="nav-item navi">
-                <a class="nav-link text-white" href="../Login System/logout.php">Logout</a>
-              </li>
-            </ul>
-          </div>
+            <div style="display: flex; align-items:center;">
+                <a class="navbar-brand" href="#"><img class="logo" src="../pic/casaidaman.png" width="180px" alt=""></a>
+                <h3 style="font-weight: 800; font-size: 24px; color: #ffffff;">Casa Idaman</h3>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=" navbar-toggler-icon "><i class="fas fa-bars"
+                        style="color:#fff; font-size:28px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item navi">
+                        <a class="nav-link text-white nav-list " href="../admin/management.html">Home</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white" href="../admin/manageResident.html">Manage Residents</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white nav-list " href="../c19management/c19management.php">Covid Reports</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white nav-list " href="../c19management/c19updatedata.php">Covid Data Update</a>
+                      </li>
+                      <li class="nav-item navi">
+                        <a class="nav-link text-white" href="../Login System/logout.php">Logout</a>
+                      </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
     
     
     </header>
@@ -74,17 +86,42 @@
 
       </section>
       <section class="container">
-        <div class="card d-flex" >
-          <img class="card-img-top" src="../pic/covid.png" alt="Card image cap" style="height: 150px;">
-          <div class="card-body">
-            <p class="card-text">
-              <h3>Covid-19 Cases</h3>
-              <h5>See Covid-19 cases daily and monthy numbers here</h5>
-              
-              <a href="c19report.html" class="btn btn-dark"  role="button" style="padding:10px">Covid-19 Report</a> 
-            </p>
+        <div class="container-lg" id="DataVisualiser">
+          <div class="row">
+            <h1 class="mb-3 text-white">Covid-19 Daily Data Report</h1>
+            <p id="total" class="text-white">Daily cases of Casa Idaman's Covid-19 positive and close contact's quarantine data.</p>
           </div>
-        </div>
+          <div class="card img-top " style="background-color: rgba(0, 0, 0, 0.426); border-radius: 100px  " > 
+                <img style="width: 100%;" src="../pic/covid.png" alt="">
+                <div class="card-img-overlay">
+                <div class="card-body p-4">
+                    
+                    <div class="row">
+                        <?php while($cases = mysqli_fetch_array($run)){
+                            if($cases['updateDate'] == date("Y-m-d")){ ?>
+                        <h4 id="header1" class="text-white">
+                          Today's Covid-19 Cases:
+                        </h4>
+                        <h4 id="header1" class="text-white">
+                          <?php echo $cases['total']; ?>
+                        </h4>
+                        <h4 id="header1" class="text-white">
+                          Block B: <?php echo $cases['blockA']; ?>
+                        </h4>
+                        <h4 id="header1" class="text-white">
+                          Block A: <?php echo $cases['blockB']; ?>
+                        </h4>
+                        
+                        <?php }}?>   
+                      </div>
+                      <div class="row">
+                      </div><br>
+                    <a href="../user/covid-19 cases.php" class="btn btn-primary"  role="button" >Show Daily Covid-19 Cases Graph</a> 
+                </div>
+            </div>
+            </div>
+          
+          <br>
       </section>
 
       <!--update-->

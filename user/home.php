@@ -287,13 +287,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
                         <div class="col-lg-5 p-0 "><img style="width: 100%;" src="../pic/visitor.png" alt=""></div>
                         <div class="col-lg-5 m-auto p-5  ">
                             <h3>COME TO <span style="color: #d3ad7f;">VISIT US?</span></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora
-                                ipsum fuga alias
-                                quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil
-                                voluptas culpa! Neque
-                                consectetur obcaecati sapiente?</p>
-                            <a href="#" class="btn btn-login">GENERATE!</a>
+                            <br>
+                            <p>Are you interested in visiting your relatives at Casa Idaman?</p>
+                            <p>Register your visit here!</p>
+                            <br>
+                            <a href="../user/visitor.php" class="btn btn-login">Register Now!</a>
                         </div>
                     </div>
                 </div>

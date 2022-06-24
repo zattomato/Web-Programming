@@ -110,7 +110,7 @@ $data = mysqli_query($conn, $report);
             <p id="total" class="text-white">Daily and monthly cases of Casa Idaman's Covid-19 positive and close contact's quarantine data.</p>
           </div>
           <div class="justify-content-md-end">
-              <a href="../Covid-19 User/covid-19cases.php" class="btn btn-primary" role="button">Show Covid-19 cases</a>
+              <a href="../user/covid-19 cases.php" class="btn btn-primary" role="button">Show Covid-19 cases</a>
           </div>
           <br>
       </section>

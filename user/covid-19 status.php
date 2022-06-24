@@ -176,7 +176,7 @@ include("../php/db_conn.php");
                 <p>
                     Casa Idaman places the places the highest priority on the health and well-being of our guests and staff. We are closely monitoring guidance related to the Coronavirus (COVID-19) from the Malaysian Government, the World Health Organization (WHO) and local health agencies. As the authorities and health agencies share more information on safe travel in Malaysia, we will update our policies and procedures accordingly.
                 </p>
-                <button type="button" class="btn btn-primary btn-lg">Download Visiting Procedure</button>
+                <a type="button" class="btn btn-primary btn-lg" href="../pic/polisi-lawatan2.pdf" download>Download Visiting Procedure</a>
               </div>
               
               <img class="col" style="border-radius: 50px;" src="../pic/visitor.png" alt=""width="300"height="400">
